@@ -1,7 +1,5 @@
 const PORT = 1337;
 const express = require("express");
-const markdown = require("markdown");
-const sass = require("node-sass");
 const routes = require("./routes/routes.js");
 
 const app = express();
