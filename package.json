@@ -9,9 +9,7 @@
     "node-sass": "^4.12.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maanlamp/cmd-redesign.git"
