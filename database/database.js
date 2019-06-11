@@ -24,7 +24,7 @@ class DB {
 
 	exists (title) {
 		const lowerCaseTitle = title.toLowerCase();
-		return this.articles.findIndex(article => article.title.toLowerCase() === title) !== -1;
+		return this.articles.findIndex(article => article.title.toLowerCase() === lowerCaseTitle) !== -1;
 	}
 }
 

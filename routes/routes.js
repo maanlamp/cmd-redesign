@@ -1,24 +1,26 @@
 const database = require("../database/database.js");
-const marked = require("marked");
+const Remarkable = require("remarkable");
+const md = new Remarkable();
 
-function editor (req, res, next) {
-	res.sendFile("html/editor.html", { root: __dirname + "/../static"});
+function edit (req, res) {
+	const { title } = req.params;
+	res.render("edit", { title, raw: database.get(title).body });
 }
 
-function home(req, res, next) {
+function home(req, res) {
 	res.sendFile("html/home.html", { root: __dirname + "/../static"});
 }
 
-function article (req, res, next) {
+function read (req, res) {
 	const { title } = req.params;
 	if (!database.exists(title))
 		res.status(404).end("Not Found.")
 	else
-		res.end(marked.parse(database.get(title).body));
+		res.render("read", { title, html: md.render(database.get(title).body) });
 }
 
 module.exports = {
-	editor,
+	edit,
 	home,
-	article
+	read
 };

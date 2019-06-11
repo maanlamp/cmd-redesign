@@ -4,9 +4,9 @@ const routes = require("./routes/routes.js");
 
 const app = express();
 
+app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/static"));
 app.get("/", routes.home);
-app.get("/editor", routes.editor);
-app.get("/article/:title", routes.article);
+app.get("/:route/:title", (req, res) => routes[req.params.route](req, res));
 
 app.listen(PORT, () => console.log(`Running on port ${PORT}`));

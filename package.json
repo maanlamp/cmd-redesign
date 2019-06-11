@@ -4,11 +4,11 @@
   "description": "cmd-website redesign",
   "main": "index.js",
   "dependencies": {
-    "marked": "^0.6.2"
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "remarkable": "^1.7.1"
   },
-  "devDependencies": {
-    "express": "^4.17.1"
-  },
+  "devDependencies": {},
   "scripts": {},
   "repository": {
     "type": "git",
