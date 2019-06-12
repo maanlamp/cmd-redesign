@@ -1,4 +1,5 @@
 import just from "/js/just.js/just.js";
+import { getFirstHeadingLinkSafe } from "./parseMarkdown.js";
 const md = new Remarkable();
 
 void async function initTextarea () {
@@ -11,25 +12,36 @@ void async function initTextarea () {
 
 	async function updateOutput () {
 		const value = md.render(input.value);
-		input.setCursorToEnd();
 		output.html(value);
 	}
 
 	input.on("input", async () => await updateOutput());
 
 	await updateOutput();
+	input.setCursorToEnd();
 }();
 
-void async function initPublishFeature () {
+void async function initStatusbar () {
+	const statusbar = just.select("#statusbar");
+	const input = just.select("#input");
 	just.select("#publish")
-		.on("click", () => {
+		.on("click", async () => {
 			//Are you sure?
-			//Save to db
-			//redirect to /read/TITLE
+			const raw = input.value;
+			await fetch("/save", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ title: getFirstHeadingLinkSafe(raw), raw })
+			})
+				.then(res => res.json())
+				.then(res => {
+					if (!res.ok)
+						console.warn("Notify user of failure.", res.error);
+					
+					window.location.href = `/read/${res.title}`;
+				});
 		});
-}();
 
-void async function initCancelFeature () {
 	just.select("#cancel")
 		.on("click", () => {
 			//are you sure?

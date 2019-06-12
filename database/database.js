@@ -1,5 +1,6 @@
 const Entry = require("./Entry.js");
 const { isUid } = require("./uid.js");
+const { getFirstHeadingLinkSafe } = require("./parseMarkdown.js");
 
 class DB {
 	constructor () {
@@ -30,18 +31,24 @@ class DB {
 	setByTitle (title, raw) {
 		const lowerCaseTitle = title.toLowerCase();
 		const index = this.articles.findIndex(article => article.title.toLowerCase() === lowerCaseTitle);
+		let entry;
 		if (index !== -1)
-			this.articles.splice(index, 1, new Entry({ title, raw }));
+			this.articles.splice(index, 1, entry = new Entry({ title, raw }));
 		else
-			this.articles.push(new Entry({ title, raw }));
+			this.articles.push(entry = new Entry({ title: getFirstHeadingLinkSafe(raw), raw }));
+		
+		return entry;
 	}
 
 	setById (id, raw) {
 		const index = this.articles.findIndex(article => article.id === id);
+		let entry;
 		if (index !== -1)
-			this.articles.splice(index, 1, new Entry({ title: "LEES EN PARSE EERSTE HEADING", raw }));
+			this.articles.splice(index, 1, entry = new Entry({ title: getFirstHeadingLinkSafe(raw), raw }));
 		else
-			this.articles.push(new Entry({ title: "LEES EN PARSE EERSTE HEADING", raw }));
+			this.articles.push(entry = new Entry({ title: getFirstHeadingLinkSafe(raw), raw }));
+		
+		return entry;
 	}
 
 	set (...args) {
