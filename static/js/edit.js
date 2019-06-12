@@ -1,12 +1,13 @@
 import just from "/js/just.js/just.js";
 import { getFirstHeadingLinkSafe } from "./parseMarkdown.js";
+import redirect from "./redirect.js";
 const md = new Remarkable();
 
 void async function initTextarea () {
 	just.plugin(function setCursorToEnd () {
 		this.elements[0].selectionStart = this.elements[0].value.length;
 	});
-	
+
 	const input = just.select("#input");
 	const output = just.select("#output");
 
@@ -36,16 +37,17 @@ void async function initStatusbar () {
 				.then(res => res.json())
 				.then(res => {
 					if (!res.ok)
-						console.warn("Notify user of failure.", res.error);
-					
-					window.location.href = `/read/${res.title}`;
+						return console.warn("Notify user of failure.", res.error);
+
+					redirect(`/read/${res.title}`);
 				});
 		});
 
 	just.select("#cancel")
 		.on("click", () => {
 			//are you sure?
-			//Cancel
-			//redirect to ???
+			const pathname = window.location.pathname
+			const title = pathname.substring(pathname.lastIndexOf("/") + 1);
+			redirect(`/read/${title}`);
 		});
 }();

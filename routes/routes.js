@@ -23,10 +23,9 @@ async function save (req, res) {
 	//This needs security features
 	try {
 		const { title } = await database.set(undefined, req.body.raw);
-		console.log(title);
 		res.json({ ok: true, title });
 	} catch (err) {
-		res.json({ ok: false, error: err.toString() });
+		res.json({ ok: false, error: err.stack });
 	}
 }
 

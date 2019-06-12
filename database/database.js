@@ -28,7 +28,7 @@ class DB {
 			return this.getByTitle(...args);
 	}
 
-	setByTitle (title, raw) {
+	setByTitle (title = "", raw) {
 		const lowerCaseTitle = title.toLowerCase();
 		const index = this.articles.findIndex(article => article.title.toLowerCase() === lowerCaseTitle);
 		let entry;
@@ -36,7 +36,7 @@ class DB {
 			this.articles.splice(index, 1, entry = new Entry({ title, raw }));
 		else
 			this.articles.push(entry = new Entry({ title: getFirstHeadingLinkSafe(raw), raw }));
-		
+
 		return entry;
 	}
 
@@ -47,13 +47,15 @@ class DB {
 			this.articles.splice(index, 1, entry = new Entry({ title: getFirstHeadingLinkSafe(raw), raw }));
 		else
 			this.articles.push(entry = new Entry({ title: getFirstHeadingLinkSafe(raw), raw }));
-		
+
 		return entry;
 	}
 
 	set (...args) {
 		if (isUid(args[0]))
 			return this.setById(...args);
+		else if (args[0] === undefined && typeof args[1] === "string")
+			return this.setByTitle(getFirstHeadingLinkSafe(args[1]), ...args.slice(1));
 		else
 			return this.setByTitle(...args);
 	}
