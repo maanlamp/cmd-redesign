@@ -1,5 +1,3 @@
-@import url("common.css");
-
 body {
     font-family: var(--cmdFont);
     color: var(--cmdBlack);
