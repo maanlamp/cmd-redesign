@@ -18,7 +18,7 @@ section a{
    color: var(--cmdWhite);
    box-shadow: 3px 3px 0px var(--cmdShadow);
    border-radius: var(--button-radius);
-   padding: 0.5em 2em;
+   padding: 1em 3em;
    font-size: inherit;
    text-align: center;
 }
@@ -206,17 +206,18 @@ section.subjects {
 }
 
 .subjects__image{
-    width: 50%;
+   width: 40%;
 }
 
 .subjects__image img{
     width: 100%;
     filter: var(--imgShadowYellow);
+    margin-left: 1.5em;
 }
 
 .subjects__textblock{
     width: var(--text-block-width);
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 
@@ -233,7 +234,7 @@ section.portfolio {
 
 .portfolio__article{
     width: 33%;
-    margin: 0 5%;
+    margin: 0 1%;
 }
 
 .portfolio__article img{
@@ -244,6 +245,31 @@ section.portfolio {
     display: inline-block;
     margin-left: 50%;
     transform: translateX(-50%);
+    width: 31%;
+}
+
+.portfolio__article p{
+    margin-top: 0.1em;
+}
+
+.portfolio a::before{
+    content: url(../images/share.svg);
+    position: absolute;
+    right: 415px;
+    transform: rotate(367deg) scale(2, -2);
+    bottom: 30px;
+        width: 60px;
+        opacity: 0.5;
+}
+
+.portfolio a::after{
+    content: url(../images/share.svg);
+    position: absolute;
+    right: -130px;
+    transform: rotate(360deg) scale(-2);
+    bottom: 30px;
+        width: 60px;
+        opacity: 0.5;
 }
 
 section.grow {
@@ -253,7 +279,7 @@ section.grow {
 }
 
 .grow__image{
-    width: 50%;
+    width: 30%;
 }
 
 .grow__image img{
@@ -261,8 +287,8 @@ section.grow {
 }
 
 .grow__textblock{
-    width: var(--text-block-width);
-    margin-left: 10%;
+    width: 70%;
+    margin-left: 5%;
 }
 
 
@@ -273,7 +299,7 @@ section.work-together {
 }
 
 .work-together__image{
-    width: 50%;
+    width: 40%;
 }
 
 .work-together__image img{
@@ -281,9 +307,13 @@ section.work-together {
     filter: var(--imgShadowYellow);
 }
 
+.work-together__textblock ul{
+    padding-left: 2em;
+}
+
 .work-together__textblock{
-    width: var(--text-block-width);
-    margin-right: 10%;
+    width: 60%;
+    margin-right: 5%;
 }
 
 section.contact {

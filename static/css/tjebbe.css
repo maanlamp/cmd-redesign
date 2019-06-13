@@ -39,10 +39,13 @@ section a,
     color: var(--cmdWhite);
     box-shadow: 3px 3px 0px var(--cmdShadow);
     border-radius: var(--button-radius);
-    padding: 0.5em 2em;
+    padding: 0.75em 4em;
     font-size: inherit;
     text-align: center;
     cursor: pointer;
+    margin-top: 1em;
+    display: block;
+    width: 60%;
 }
 
 .btn--secondary {
@@ -63,35 +66,8 @@ section.round-corners {
     border-top-right-radius: 50px;
 }
 
-section.hero-image {
-    background-image: url();
-}
-
-section.cmd {
-    background-color: var(--cmdYellow);
-}
-
-section.subjects {
-    background-color: var(--cmdGrey);
-}
-
-section.portfolio {
-    background-color: var(--cmdWhite);
-}
-
-section.grow {
-    background-color: var(--cmdGrey);
-}
-
-section.work-together {
-    background-color: var(--cmdWhite);
-}
-
 section.contact {
     background-color: var(--cmdBlack);
-
-    padding-top: 5em;
-    padding-bottom: 5em;
 }
 
 .contact h2 {
@@ -208,7 +184,7 @@ section.staff {
 
     display: flex;
     justify-content: space-around;
-    margin-top: 0;
+    margin-top: 2em;
 }
 
 .card__name {
@@ -226,7 +202,8 @@ section.banner {
     display: flex;
     align-items: center;
 
-    margin-top: 0;
+    margin-top: -4em;
+    padding: 0;
 }
 
 .banner .banner__title {

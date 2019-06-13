@@ -16,7 +16,7 @@
 
 
 	/* Paddings */
-	--section-padding: 3em;
+	--section-padding: 3em 3em 7em 3em;
 
 	/* Font */
 	--cmdFont: 'Open Sans', sans-serif;
@@ -27,6 +27,7 @@
 	--h5-size: .83em;
 	--h6-size: .75em;
 	--p-size: 1em;
+	--p-size-big: 1.1em;
 
 	/* Utilities */
 	--button-radius: 0.5em;
