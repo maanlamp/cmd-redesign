@@ -1,4 +1,4 @@
-import just from "/js/just.js/just.js";
+import just from "/js/just.js/just.min.js";
 import { getFirstHeadingLinkSafe } from "./parseMarkdown.js";
 import redirect from "./redirect.js";
 const md = new Remarkable();
