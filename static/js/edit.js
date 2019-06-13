@@ -5,7 +5,7 @@ const md = new Remarkable();
 
 void async function initTextarea () {
 	just.plugin(function setCursorToEnd () {
-		this.elements[0].selectionStart = this.elements[0].value.length;
+		this.elements[0].selectionStart = this.elements[0].selectionEnd = this.elements[0].value.length;
 	});
 
 	const input = just.select("#input");
