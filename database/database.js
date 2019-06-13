@@ -6,8 +6,20 @@ class DB {
 	constructor () {
 		this.articles = [
 			new Entry({
-				title: "dit-is-een-artikeltje",
-				raw: "# Dit is een artikeltje.\n\nWist je dat je dingen kan doen met markdown?\n\nDingen zoals het volgende:\n- lol\n- nog iets\n- en nog wat anders.\n\n## Gave shit hè?\n\nJa best wel."
+				title: "cmd-amsterdam",
+				raw: "# CMD-Amsterdam"
+					+ "\n## Opleiding voor digital interactive design."
+					+ "\n\nWij zijn Communication and Multimedia Design (CMD). Wij zijn een "
+					+ "HBO-ontwerpopleiding voor digital interactive design. Onze studenten "
+					+ "ontwerpen en realiseren digitale interactieve oplossingen die "
+					+ "optimaal aansluiten bij de behoeften van de gebruikers."
+					+ "\n\nIn de kern van de opleiding zit interaction design, visual "
+					+ "design en techniek (met name frontend development). Onze vakdocenten "
+					+ "hebben een goed netwerk en vertalen continu recente ontwikkelingen "
+					+ "naar het gehele onderwijsprogramma. Afgestudeerde studenten zijn "
+					+ "daarmee van grote waarde in het huidige werkveld. Daar zijn wij "
+					+ "trots op!"
+					+ "\n\n![Foto van iemand die een interface ontwerpt.](../images/cmd_daantjebons_0007.jpg)"
 			})
 		];
 	}
