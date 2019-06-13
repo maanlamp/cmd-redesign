@@ -29,11 +29,9 @@ void async function initStatusbar () {
 		.on("click", async () => {
 			//Are you sure?
 			const raw = input.value;
-			await fetch("/save", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ title: getFirstHeadingLinkSafe(raw), raw })
-			})
+			just.http
+				.post("/save")
+				.json({ title: getFirstHeadingLinkSafe(raw), raw })
 				.then(res => res.json())
 				.then(res => {
 					if (!res.ok)
