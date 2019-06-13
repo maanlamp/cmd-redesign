@@ -29,16 +29,14 @@ void async function initStatusbar () {
 		.on("click", async () => {
 			//Are you sure?
 			const raw = input.value;
-			just.http
+			const res = await just.http
 				.post("/save")
-				.json({ title: getFirstHeadingLinkSafe(raw), raw })
-				.then(res => res.json())
-				.then(res => {
-					if (!res.ok)
-						return console.warn("Notify user of failure.", res.error);
+				.json({ title: getFirstHeadingLinkSafe(raw), raw });
 
-					redirect(`/read/${res.title}`);
-				});
+			if (!res.ok)
+				return console.warn("Notify user of failure.", res.error);
+
+			redirect(`/read/${res.title}`);
 		});
 
 	just.select("#cancel")
