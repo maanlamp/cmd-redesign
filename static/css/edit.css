@@ -38,3 +38,21 @@ body {
     background-color: var(--cmdYellow);
     flex: 0 0 100%;
 }
+
+/* PREVIEW CSS ONLY */
+#output * {
+	max-width: 100%;
+}
+
+#statusbar button {
+	background: black;
+	color: white;
+	width: unset;
+	display: inline-block;
+	margin: unset;
+	padding: .25rem 1rem;
+	height: unset;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
