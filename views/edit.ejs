@@ -11,10 +11,10 @@
 	<link rel="stylesheet" href="/css/tjebbe.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js" defer></script>
 	<script src="/js/edit.js" type="module"></script>
-	<title>${data.title}</title>
+	<title><%= title -%></title>
 </head>
 <body>
-	<textarea id="input" class="panel" autofocus>${data.raw}</textarea>
+	<textarea id="input" class="panel" autofocus><%= raw -%></textarea>
 	<div id="output" class="panel"></div>
 	<footer id="statusbar">
 		<button id="cancel">Annuleren</button>
