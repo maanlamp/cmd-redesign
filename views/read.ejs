@@ -5,11 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/common.css">
-<<<<<<< HEAD:views/read.marko
 	<link rel="stylesheet" href="/css/home.css">
 	<link rel="stylesheet" href="/css/karin.css">
 	<link rel="stylesheet" href="/css/tjebbe.css">
-	<title>${title}</title>
+	<title><%= title -%></title>
 </head>
 <body>
 	<header class="header">
@@ -28,12 +27,6 @@
 			</ul>
 		</nav>
 	</header>
-	$!{html}
-=======
-	<title><%= title -%></title>
-</head>
-<body>
 	<%- html -%>
->>>>>>> parent of 1fe4dc9... Switch to markojs:views/read.ejs
 </body>
 </html>
