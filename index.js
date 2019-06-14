@@ -11,8 +11,9 @@ app.use(express.static(__dirname + "/static"));
 
 //Define routes
 app.get("/",              routes.home);
-app.get("/:route/:title", async (req, res) => await routes[req.params.route](req, res));
-app.post("/save",         async (req, res) => await routes.save(req, res));
+app.get("/read/:title", async (req, res) => await routes.read(req, res));
+app.get("/edit/:title", async (req, res) => await routes.edit(req, res));
+app.post("/save",       async (req, res) => await routes.save(req, res));
 
 //Start that badboy
 app.listen(PORT, console.log.apply(null, [`Running on port ${PORT}`]));
