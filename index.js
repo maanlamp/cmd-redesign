@@ -2,11 +2,13 @@ const PORT = 1337;
 const express = require("express");
 const routes = require("./routes/routes.js");
 const bodyparser = require("body-parser").json();
+const marko = require("marko/express");
+require("marko/node-require");
 
 //Setup app
 const app = express();
-app.set("view engine", "ejs");
 app.use(bodyparser);
+app.use(marko());
 app.use(express.static(__dirname + "/static"));
 
 //Define routes
