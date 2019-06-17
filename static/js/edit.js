@@ -1,6 +1,8 @@
 import just from "/js/just.js/just.min.js";
 import { getFirstHeadingLinkSafe } from "./parseMarkdown.js";
 import redirect from "./redirect.js";
+import ResetableTimeout from "./Timeout.js";
+//Remarkable is available through a global script loaded before
 const md = new Remarkable();
 
 void async function initTextarea () {
@@ -16,10 +18,14 @@ void async function initTextarea () {
 		output.html(value);
 	}
 
-	input.on("input", async () => await updateOutput());
+	const timeout = new ResetableTimeout({
+		timeout: 500,
+		handler: updateOutput
+	}).start();
 
-	await updateOutput();
-	input.setCursorToEnd();
+	input
+		.on("input", timeout.reset.bind(timeout))
+		.setCursorToEnd();
 }();
 
 void async function initStatusbar () {
