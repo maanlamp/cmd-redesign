@@ -179,6 +179,8 @@ section {
 
 .header .logo-container .header__logo {
     width: 100%;
+    min-width: 200px;
+    display: inherit;
 }
 
 .header .menu-btn {
@@ -198,6 +200,7 @@ section {
 .header .menu-icon img {
     width: 100%;
     height: auto;
+    display: inherit;
 }
 
 .header .header__nav {
@@ -249,6 +252,7 @@ section {
 @media (max-width: 1050px) {
     .header {
         flex-wrap: wrap;
+        padding: 0.5em;
     }
 
     .header .menu-icon {
@@ -269,6 +273,7 @@ section {
     .header .header__nav .nav {
         display: block;
         text-align: center;
+        margin: 0;
     }
 
     .header .header__nav .nav li.search {
