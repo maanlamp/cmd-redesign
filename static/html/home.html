@@ -10,22 +10,28 @@
 </head>
 
 <body>
-	<header class="header">
-		<nav class="header__nav">
-			<ul class="header__nav-list">
-				<li><a aria-label="CMD Amsterdam logo link naar homepagina" href="#"></a></li>
-				<li><a href="#" aria-label="test">Studentenwerk</a></li>
-				<li><a href="#" aria-label="test">CMD</a></li>
-				<li><a href="#" aria-label="test">Studievakken</a></li>
-				<li><a href="#" aria-label="test">Doorgroeien</a></li>
-				<li><a href="#" aria-label="test">Samenwerken</a></li>
-				<li><a href="#" aria-label="test">Contact</a></li>
-				<li><a aria-label="Zoekknop" href="#" aria-label="test">&nbsp;</a></li>
-				<li><a href="" aria-label="test">Nederlands</a></li>
-				<li><a href="" aria-label="test">Engels</a></li>
-			</ul>
-		</nav>
-	</header>
+    <header class="header">
+        <a class="logo-container" aria-label="Home" href="">
+        	<img src="../images/logo.png" alt="HVA logo" class="header__logo">
+        </a>
+
+        <input class="menu-btn" type="checkbox" id="menu-hamburger">
+        <label class="menu-icon" for="menu-hamburger"><img src="../images/hamburger-icon.svg" alt="Hamburger icon"></label>
+
+        <nav class="header__nav">
+            <ul class="nav">
+                <li><a href="#">Studentenwerk</a></li>
+                <li><a href="#">CMD</a></li>
+                <li><a href="#">Studievakken</a></li>
+                <li><a href="#">Doorgroeien</a></li>
+                <li><a href="#">Samenwerken</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="search"><a href="#"><img src="../images/search.svg" alt="Search icon"></a></li>
+                <li class="netherlands"><a href="#"><img src="../images/netherlands-flag.png" alt="Search icon"></a></li>
+                <li class="english"><a href="#"><img src="../images/english-flag.png" alt="Search icon"></a></li>
+            </ul>
+        </nav>
+    </header>
 	<section class="hero-image">
 		<div class="hero-image__image">
 			<img src="../images/cmd-blocks.png" alt="">
@@ -34,6 +40,7 @@
 			<h1 class="block-border">CMD Amsterdam</h1>
 			<p class="block-fill">Opleiding voor digital interactive design.</p>
 		</div>
+		<img class="icon hero-image__icon" src="../images/icon/laptop_icon.svg" alt="">
 	</section>
 	<section class="studentenwerk">
 		<h2>Studentenwerk</h2>
@@ -65,19 +72,23 @@
 			<a class="btn--white-shadow" href="">Meer over CMD</a>
 		</div>
 		<div class="cmd__image">
-			<img src="../images/cmd_daantjebons_0007.jpg" alt="daantjebons">
+			<img class="icon icon-top-left" src="../images/icon/rotate_icon.svg" alt="">
+			<img class="primary-image" src="../images/cmd_daantjebons_0007.jpg" alt="daantjebons">
+			<img class="icon icon-bottom-right" src="../images/icon/robot_icon.svg" alt="">
 		</div>
 	</section>
 	<section class="subjects">
 		<div class="subjects__image">
-			<img src="../images/cmd_daantjebons_0025-1.jpg" alt="daantjebons">
+			<img class="icon icon-top-right" src="../images/icon/card_icon.svg" alt="">
+			<img class="primary-image" src="../images/cmd_daantjebons_0025-1.jpg" alt="daantjebons">
+			<img class="icon icon-bottom-left" src="../images/icon/hand_icon.svg" alt="">
 		</div>
 		<div class="subjects__textblock">
 			<h2>Studievakken</h2>
 			<p class="p-big">Het werk van onze studenten varieert van websites tot webshops, en van fysieke producten met een NFC-chip tot interactieve datavisualisaties. En dan zijn we er vast nog een paar vergeten.</p>
 
 			<p>We hebben een mooie selectie van studentenwerk voor je gemaakt. Hierbij kun je ook kiezen tussen werk uit de vier studiejaren. Laat je verrassen en voel je vrij om er comments bij te plaatsen!</p>
-			<a class="btn--grey-shadow" href="">Bekijk studentenwerk</a>
+			<a class="btn--grey-shadow" href="">Bekijk de studievakken</a>
 		</div>
 	</section>
 	<section class="grow">
@@ -94,6 +105,7 @@
 				<li>Digitale duizendpoten</li>
 				<li>Design researchers (uitzonderingen)</li>
 			</ul>
+			<img class="icon icon-section" src="../images/icon/pin_icon.svg" alt="">
 			<a class="btn--grey-shadow" href="">Meer over doorgroeien</a>
 		</div>
 	</section>
@@ -114,7 +126,9 @@
 			<a href="">Meer over samenwerken</a>
 		</div>
 		<div class="work-together__image">
-			<img src="../images/cmd_daantjebons_0022.jpg" alt="daantjebons">
+			<img class="icon icon-top-left" src="../images/icon/globe_icon.svg" alt="">
+			<img class="primary-image" src="../images/cmd_daantjebons_0022.jpg" alt="daantjebons">
+			<img class="icon icon-bottom-right" src="../images/icon/phone_icon.svg" alt="">
 		</div>
 	</section>
 	<section class="contact">

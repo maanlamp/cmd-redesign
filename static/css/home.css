@@ -5,29 +5,41 @@ section.hero-image {
     flex-direction: row;
     background-image: url(../images/cmd_daantjebons_0025-1.jpg);
     height: 90vh;
-    
+
     background-repeat: no-repeat;
     background-size: 120%;
 }
 
-.hero-image__image{
+.hero-image__image {
     margin: auto 5% auto auto;
 }
 
-.hero-image__image img{
+.hero-image__image img {
     width: 9em;
     height: auto;
 }
 
-.hero-image__textblock{
+.hero-image__icon {
+    width: 15%;
+}
+
+.hero-image__textblock {
     margin-right: auto;
     margin: auto auto auto 5%;
 }
 
-.hero-image__textblock p{
+.hero-image__textblock p {
     font-size: 18px;
     line-height: 2em;
     text-align: center;
+}
+
+
+.hero-image .icon {
+    position: absolute;
+    bottom: 10vh;
+    right: 5vw;
+
 }
 
 section.cmd {
@@ -38,11 +50,12 @@ section.cmd {
 
 .cmd__image {
     width: 35%;
+    margin: auto 0;
 }
 
-.cmd__image img {
+.cmd__image .primary-image {
     width: 100%;
-    filter: var(--imgShadowGrey);
+    filter: var(--imgShadowWhite);
 }
 
 .cmd__textblock {
@@ -57,9 +70,10 @@ section.subjects {
 
 .subjects__image {
     width: 40%;
+    margin: auto 0;
 }
 
-.subjects__image img {
+.subjects__image .primary-image {
     width: 100%;
     filter: var(--imgShadowYellow);
     margin-left: 1.5em;
@@ -88,7 +102,7 @@ section.studentenwerk {
     margin: 0 1%;
 }
 
-.studentenwerk__article img {
+.studentenwerk img {
     width: 100%;
 }
 
@@ -106,7 +120,7 @@ section.studentenwerk {
 .studentenwerk a::before {
     content: url(../images/share.svg);
     position: absolute;
-    right: 415px;
+    right: 120%;
     transform: rotate(367deg) scale(2, -2);
     bottom: 30px;
     width: 60px;
@@ -141,6 +155,10 @@ section.grow {
     margin-left: 5%;
 }
 
+.grow__textblock .icon-section {
+    right: 10%;
+}
+
 .grow__textblock ul {
     padding-left: 2em;
 }
@@ -153,10 +171,11 @@ section.work-together {
 }
 
 .work-together__image {
-    width: 30%;
+    width: 25%;
+    margin: auto 0;
 }
 
-.work-together__image img {
+.work-together__image .primary-image {
     width: 100%;
     filter: var(--imgShadowWhite);
 }
@@ -167,7 +186,7 @@ section.work-together {
 
 .work-together__textblock {
     width: 60%;
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 .work-together a {
@@ -270,8 +289,9 @@ section.contact {
 
 .contact button.btn--secondary {
     margin-top: 0.5em;
-    width: 25%;
+    width: 33%;
     margin-left: auto;
+    text-align: center;
 }
 
 .contact button.btn--secondary:hover,
@@ -398,4 +418,264 @@ footer.footer {
 
 .back-to-top:hover {
     background-color: #222;
+}
+
+@media(max-width: 1000px) {
+    .cmd__image {
+        width: 50%;
+    }
+
+    .work-together__image {
+        width: 50%;
+    }
+
+    section.staff {
+        justify-content: space-between;
+        padding: 3em;
+    }
+}
+
+@media(max-width: 800px) {
+    .studentenwerk a {
+        width: auto;
+    }
+
+    .cmd__textblock p:nth-of-type(2) {
+        display: none;
+    }
+
+    .subjects__image .primary-image {
+        margin-left: 0;
+    }
+
+    .subjects p:nth-of-type(2) {
+        display: none;
+    }
+
+    .work-together__textblock p:nth-of-type(2) {
+        display: none;
+    }
+
+    section.staff {
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+    }
+
+    .staff .staff__card {
+        width: 50%;
+        text-align: center;
+        margin: 0.5em 0;
+    }
+}
+
+@media(max-width: 650px) {
+    section.hero-image {
+        height: 75vh;
+    }
+
+    .hero-image__textblock {
+        margin: 0 auto;
+        margin-top: 30%;
+    }
+
+    .hero-image__image {
+        display: none;
+    }
+
+    .hero-image__textblock p {
+        font-size: 16px;
+    }
+
+    .studentenwerk .articles .studentenwerk__article {
+        width: 50%;
+    }
+
+    .studentenwerk .articles .studentenwerk__article:last-child {
+        display: none;
+    }
+
+    .studentenwerk a:before,
+    .studentenwerk a:after {
+        content: "";
+    }
+
+    .studentenwerk a {
+        width: 100%;
+    }
+
+    section.cmd {
+        flex-direction: column;
+    }
+
+    .cmd__textblock {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cmd__textblock h2 {
+        text-align: center;
+    }
+
+    .cmd__image {
+        display: none;
+    }
+
+    .subjects__image .primary-image {
+        filter: none;
+    }
+
+    .subjects__textblock {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .subjects__textblock h2 {
+        text-align: center;
+    }
+
+    .subjects__image {
+        display: none;
+    }
+
+    .subjects__image .primary-image {
+        filter: none;
+    }
+
+    section.grow {
+        flex-direction: column;
+    }
+
+    .grow__image .primary-image {
+        filter: none;
+    }
+
+    .grow__textblock {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .grow__textblock h2 {
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .grow__image {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .grow__image .primary-image {
+        width: 90%;
+        filter: none;
+    }
+
+    section.work-together {
+        flex-direction: column;
+    }
+
+    .work-together__textblock {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .work-together__textblock h2 {
+        text-align: center;
+    }
+
+    .work-together__image {
+        display: none;
+    }
+
+    .contact .contact__form {
+        flex-direction: column;
+    }
+
+    .contact .contact__form * {
+        width: 100%;
+    }
+
+    .contact form textarea {
+        height: 150px;
+    }
+
+    .contact button.btn--secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    section.banner {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .banner .banner__title {
+        margin: 0 auto;
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+
+    .banner .banner__button {
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+@media(max-width: 450px) {
+    section.hero-image {
+        background-size: cover;
+        height: 50vh;
+    }
+
+    .hero-image__textblock {
+        margin-top: 20%;
+    }
+
+    .hero-image__textblock p {
+        font-size: 14px;
+    }
+
+    .studentenwerk .articles {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .studentenwerk .articles .studentenwerk__article {
+        width: 100%;
+    }
+
+    .studentenwerk .articles .studentenwerk__article:nth-of-type(2) {
+        margin-top: 1em;
+    }
+
+    .grow__image {
+        width: 75%;
+    }
+
+    .banner .banner__button {
+        width: 100%;
+    }
+
+    .footer .footer__copyright {
+        margin-left: 0;
+    }
+
+    .footer .footer__social {
+        margin-right: 0;
+    }
+}
+
+@media(max-width: 400px) {
+    .hero-image__textblock p {
+        font-size: 12px;
+    }
+
+    section.staff {
+        flex-direction: column;
+    }
+
+    .staff .staff__card {
+        width: 100%;
+    }
 }
