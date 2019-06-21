@@ -12,21 +12,37 @@
 </head>
 <body>
 	<header class="header">
-		<nav class="header__nav">
-			<ul class="header__nav-list">
-				<li><a aria-label="CMD Amsterdam logo link naar homepagina" href="#"></a></li>
-				<li><a href="#" aria-label="test">CMD</a></li>
-				<li><a href="#" aria-label="test">Studievakken</a></li>
-				<li><a href="#" aria-label="test">Portfolio</a></li>
-				<li><a href="#" aria-label="test">Doorgroeien</a></li>
-				<li><a href="#" aria-label="test">Samenwerken</a></li>
-				<li><a href="#" aria-label="test">Contact</a></li>
-				<li><a aria-label="Zoekknop" href="#" aria-label="test">&nbsp;</a></li>
-				<li><a href="" aria-label="test">Nederlands</a></li>
-				<li><a href="" aria-label="test">Engels</a></li>
-			</ul>
-		</nav>
-	</header>
+        <a class="logo-container" aria-label="Home" href="">
+        	<img src="../images/logo.png" alt="HVA logo" class="header__logo">
+        </a>
+
+        <input class="menu-btn" type="checkbox" id="menu-hamburger">
+        <label class="menu-icon" for="menu-hamburger"><img class="hambuger-image" src="../images/hamburger-icon.svg" alt="Hamburger icon"></label>
+
+        <nav class="header__nav">
+            <ul class="nav">
+                <li><a href="#">Studentenwerk</a></li>
+                <li><a href="#">CMD</a></li>
+                <li><a href="#">Studievakken</a></li>
+                <li><a href="#">Doorgroeien</a></li>
+                <li><a href="#">Samenwerken</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="search"><a href="#"><img src="../images/search.svg" alt="Search icon"></a></li>
+                <li class="netherlands"><a href="#"><img src="../images/netherlands-flag.png" alt="Search icon"></a></li>
+                <li class="english"><a href="#"><img src="../images/english-flag.png" alt="Search icon"></a></li>
+            </ul>
+        </nav>
+    </header>
 	<%- html -%>
+
+	<footer class="footer">
+		<p class="footer__copyright">&copy; 2019 CMD Amsterdam</p>
+		<ul class="footer__social">
+			<li><a href="" id="twitter-logo" aria-label="test"></a></li>
+			<li><a href="" id="facebook-logo" aria-label="test"></a></li>
+			<li><a href="" id="vimeo-logo" aria-label="test"></a></li>
+			<li><a href="" id="linkdin-logo" aria-label="test"></a></li>
+		</ul>
+	</footer>
 </body>
 </html>
