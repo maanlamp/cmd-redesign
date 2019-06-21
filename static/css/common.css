@@ -5,33 +5,328 @@
 }
 
 :root {
-	/* Colors */
-	--cmdYellow: #FFF021;
-	--cmdGrey: #F3F3F3;
-	--cmdWhite: #FFFFFF;
-	--cmdBlack: #242424;
-	--cmdShadow: #CCCCCC;
+    /* Colors */
+    --cmdYellow: #FFF021;
+    --cmdWhite: #FFFFFF;
+    --cmdBlack: #242424;
+    --cmdShadowGrey: #CCCCCC;
+    --cmdShadowWhite: var(--cmdWhite);
 
-	/* Margins */
+    /* Margins */
 
 
-	/* Paddings */
-	--section-padding: 3em 3em 7em 3em;
+    /* Paddings */
+    --section-padding: 4em 5em;
 
-	/* Font */
-	--cmdFont: 'Open Sans', sans-serif;
-	--h1-size: 3em;
-	--h2-size: 1.5em;
-	--h3-size: 1.17em;
-	--h4-size: 1.12em;
-	--h5-size: .83em;
-	--h6-size: .75em;
-	--p-size: 1em;
-	--p-size-big: 1.1em;
+    /* Font */
+    --cmdFont: 'Open Sans', sans-serif;
+    --h1-size: 3em;
+    --h2-size: 1.5em;
+    --h3-size: 1.17em;
+    --h4-size: 1.12em;
+    --h5-size: .83em;
+    --h6-size: .75em;
+    --p-size: 1em;
+    --p-size-big: 1.1em;
 
-	/* Utilities */
-	--button-radius: 0.5em;
-	--imgShadowYellow: drop-shadow(-20px 20px 0px var(--cmdYellow));
-	--imgShadowGrey: drop-shadow(20px 20px 0px var(--cmdGrey));
-	--text-block-width: 50%;
+    /* Utilities */
+    --imgShadowYellow: drop-shadow(-20px 20px 0px var(--cmdYellow));
+    --imgShadowGrey: drop-shadow(20px 20px 0px var(--cmdGrey));
+    --imgShadowWhite: drop-shadow(-20px 20px 0px var(--cmdWhite));
+    --text-block-width: 50%;
+}
+
+body {
+    font-family: var(--cmdFont);
+    color: var(--cmdBlack);
+    font-size: 16px;
+}
+
+h1 {
+    font-size: var(--h1-size);
+    text-align: center;
+}
+
+h2 {
+    font-size: var(--h2-size);
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+h4 {
+    font-size: var(--h4-size);
+}
+
+h5 {
+    font-size: var(--h5-size);
+}
+
+h6 {
+    font-size: var(--h6-size);
+}
+
+p {
+    font-size: var(--p-size);
+}
+
+.p-big {
+    font-size: var(--p-size-big);
+    margin-bottom: 1em;
+}
+
+button,
+section a,
+.btn {
+    background-color: var(--cmdBlack);
+    color: var(--cmdWhite);
+    padding: 0.75em 4em;
+    font-size: inherit;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1em;
+    display: block;
+    width: 60%;
+    text-decoration: none;
+}
+
+.btn--white-shadow {
+    box-shadow: 0px 4px 0px var(--cmdShadowWhite);
+}
+
+.btn--grey-shadow {
+    box-shadow: 0px 4px 0px var(--cmdShadowGrey);
+}
+
+.btn--secondary {
+    box-shadow: none;
+    background-color: var(--cmdYellow);
+    border-radius: 0;
+    border: none;
+    color: var(--cmdBlack);
+}
+
+.icon {
+    width: 8%;
+    position: absolute;
+    z-index: 1;
+}
+
+.icon-top-left {
+    margin-top: -5%;
+    margin-left: -5%;
+    transform: rotate(30deg);
+}
+
+.icon-bottom-left {
+    margin-top: -10%;
+    margin-left: 5%;
+    transform: rotate(31deg);
+}
+
+.icon-top-right {
+    margin-top: -3%;
+    margin-left: 20%;
+}
+
+.icon-bottom-right {
+    margin-top: -10%;
+    right: 0;
+    margin-right: 10%;
+    transform: rotate(20deg);
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+.block-border {
+    border: 3px solid var(--cmdBlack);
+    padding: 0.2em;
+}
+
+
+.block-fill {
+    border: 3px solid var(--cmdBlack);
+    background: var(--cmdBlack);
+    color: white;
+    padding: 1em 0;
+    margin-right: -3em;
+    margin-left: 3em;
+}
+
+section {
+    padding: var(--section-padding);
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.22);
+    position: fixed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .logo-container {
+    width: 200px;
+    margin: auto 50px;
+}
+
+.header .logo-container .header__logo {
+    width: 100%;
+    min-width: 200px;
+    display: inherit;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-icon {
+    display: none;
+}
+
+.header .menu-icon {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.header .menu-icon img {
+    width: 100%;
+    height: auto;
+    display: inherit;
+}
+
+.header .header__nav {
+    display: flex;
+}
+
+.header .header__nav .nav {
+    list-style: none;
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.header .header__nav .nav li {
+    margin: 10px;
+}
+
+.header .header__nav .nav li a:hover,
+.header .header__nav .nav li a:focus {
+    border-bottom: 3px solid black;
+    padding-bottom: 3px;
+}
+
+.header .header__nav .nav li:nth-last-of-type(-n+3) a {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.header .header__nav .nav li:nth-last-of-type(-n+3) a:hover img,
+.header .header__nav .nav li:nth-last-of-type(-n+3) a:focus img {
+    transform: scale(1.1);
+}
+
+.header .header__nav .nav li.search {
+    width: 20px;
+}
+
+.header .header__nav .nav li.netherlands img,
+.header .header__nav .nav li.english img {
+    width: 30px;
+    height: auto;
+}
+
+.header .header__nav .nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 1050px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 0.5em;
+    }
+
+    .header .menu-icon {
+        display: block;
+        margin-right: 50px;
+    }
+
+    .header .menu-btn:checked~.header__nav {
+        display: block;
+    }
+
+    .header .header__nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .header .header__nav .nav {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+
+    .header .header__nav .nav li.search {
+        margin: 0 auto;
+    }
+
+    .header .header__nav .nav li {
+        margin: 15px;
+    }
+}
+
+@media(max-width: 1000px) {
+
+    button,
+    section a,
+    .btn {
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px) {
+
+    .icon {
+        display: none;
+    }
+
+    section {
+        padding: 2em 3em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .block-fill {
+        padding: 1em 0.8em;
+        margin: 0;
+    }
+}
+
+@media(max-width: 450px) {
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media(max-width: 400px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    section {
+        padding: 1.5em 2em;
+    }
 }
