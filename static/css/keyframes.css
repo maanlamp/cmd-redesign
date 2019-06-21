@@ -1,0 +1,17 @@
+.rotate{
+	animation: rotate 4s linear infinite;
+}
+
+.finish{
+	/*animation-fill-mode: forwards;*/
+	animation: rotate 4s linear forwards;
+}
+
+@keyframes rotate {
+	from {
+        transform: rotate(0deg);
+    }
+    	to {
+        transform: rotate(360deg);
+    }
+}
