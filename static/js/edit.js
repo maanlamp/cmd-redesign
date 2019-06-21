@@ -32,7 +32,7 @@ void function initTextarea () {
 			}
 		];
 		return md.replace(/#\{.+?\}/g, match => {
-			const name = match.match(/#\{(?<name>.+?)\}/)[1];
+			const name = match.match(/#\{(.+?)\}/)[1];
 			return (components.find(comp => comp.name === name)||{}).value||"";
 		});
 	}
