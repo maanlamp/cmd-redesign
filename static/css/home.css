@@ -3,11 +3,11 @@
 section.hero-image {
     display: flex;
     flex-direction: row;
-    background-image: url(../images/cmd_daantjebons_0025-1.jpg);
+    background-image: url(../images/hero-background-image.jpg);
     height: 90vh;
 
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: cover;
 }
 
 .hero-image__image {
