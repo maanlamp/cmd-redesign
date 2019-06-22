@@ -16,7 +16,7 @@ body p{
 }
 
 body >:not(header) img{
-	width: 50%;
+	width: 70%;
 }
 
 body >:not(header) img[src$='.jpg']{
@@ -56,24 +56,29 @@ body h2{
 
 body h2:nth-of-type(odd){
 	text-align: left;
-	padding: 2em 2em 0 2em;
+	padding: 2em 3.5em 0 3.2em;
 }
 
 body h2:nth-of-type(even){
-	text-align: right;
-	padding: 2em 2em 0 2em;
+	text-align: left;
+	padding: 2em 3.5em 0 3.2em;
+    padding-left: 50%;
 }
 
 body h2:nth-of-type(odd) + p{
 	float: left;
 	text-align: left;
 	width: 50%;
+	padding: 5em;
+    padding-top: 1em;
 }
 
 body h2:nth-of-type(even) + p{
 	float: right;
-	text-align: right;
+	text-align: left;
 	width: 50%;
+	padding: 5em;
+    padding-top: 1em;
 }
 
 body h2:nth-of-type(2),
@@ -95,20 +100,37 @@ body h2:last-of-type + p> img[src$='.jpg']{
 }
 
 body h2:nth-of-type(even) + p + p{
-	text-align: right;
+	text-align: left;
 	float: right;
 	width: 50%;
+	padding: 5em;
+    padding-top: 1em;
+    padding-left: 0;
 }
 
 body h2:nth-of-type(odd) + p + p{
 	text-align: left;
 	float: left;
 	width: 50%;
+	padding: 5em;
+    padding-top: 1em;
 }
 
 body h2:nth-of-type(2) + p + p,
 body h2:last-of-type + p + p{
     background-color: var(--cmdYellow);
+}
+
+body h2:nth-of-type(even) + p + p > img,
+body h2:nth-of-type(even) + p > img{
+	text-align: center;
+	margin-right: 15%;
+}
+
+body h2:nth-of-type(odd) + p > img,
+body h2:nth-of-type(odd) + p + p > img{
+	text-align: center;
+	margin-left: 15%;
 }
 
 body p a{
@@ -122,16 +144,20 @@ body p a{
     text-decoration: none;
     margin: 1em;
     display: inline-block;
+    margin-left: 0;
 }
 
 body h3{
-	width: 25%;
+	float: left;
+	width: 50%;
 }
 
 body h3 + p{
-	width: 25%;
+	float: left;
+	width: 50%;
 }
 
 body h3 + p + p{
-	width: 25%;
+	float: left;
+	width: 50%;
 }

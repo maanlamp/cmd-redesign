@@ -1,42 +1,61 @@
-const allIcons = document.querySelectorAll('.icon');
+let isScrolling = false;
+window.onscroll = function(e) {
+    isScrolling = true;
+    if (isScrolling) {
+        const allIconsTopLeft = document.querySelectorAll('.icon-top-left');
+        allIconsTopLeft.forEach(function(iconTopLeft) {
+            iconTopLeft.classList.add('rotate');
+        })
 
-const sections = document.querySelectorAll('section')
+        const allIconsBottomLeft = document.querySelectorAll('.icon-bottom-left');
+        allIconsBottomLeft.forEach(function(iconBottomLeft) {
+            iconBottomLeft.classList.add('bounce');
+        })
 
-sections.forEach(function(section){
-	console.log(section.scrollTop())
-})
+        const allIconsBottomRight = document.querySelectorAll('.icon-bottom-right');
+        allIconsBottomRight.forEach(function(iconBottomRight) {
+            iconBottomRight.classList.add('shake');
+        })
 
-// Setup isScrolling variable
-let isScrolling;
+        const allIconsTopRight = document.querySelectorAll('.icon-top-right');
+        allIconsTopRight.forEach(function(iconTopRight) {
+            iconTopRight.classList.add('zoom');
+        })
 
-function addAnimation() {
-    allIcons.forEach(function(icon) {
-        if (!icon.classList.contains('rotate')) {
-            icon.classList.add('rotate');
-        }
-    })
+        const allIconsSection = document.querySelectorAll('.icon-section');
+        allIconsSection.forEach(function(iconSection) {
+            iconSection.classList.add('ghost');
+        })
+
+        setTimeout(stopScrolling, 1000);
+    } else {
+        console.log('oops!')
+    }
 }
 
-// Listen for scroll events
-window.addEventListener('scroll', function(event) {
+function stopScrolling() {
+    const allIconsTopLeft = document.querySelectorAll('.icon-top-left');
+    allIconsTopLeft.forEach(function(iconTopLeft) {
+        iconTopLeft.classList.remove('rotate');
+    })
 
-    addAnimation()
+    const allIconsBottomLeft = document.querySelectorAll('.icon-bottom-left');
+    allIconsBottomLeft.forEach(function(iconBottomLeft) {
+        iconBottomLeft.classList.remove('bounce');
+    })
 
-    // Clear our timeout throughout the scroll
-    window.clearTimeout(isScrolling);
+    const allIconsBottomRight = document.querySelectorAll('.icon-bottom-right');
+    allIconsBottomRight.forEach(function(iconBottomRight) {
+        iconBottomRight.classList.remove('shake');
+    })
 
-    // Set a timeout to run after scrolling ends
-    isScrolling = setTimeout(function() {
+    const allIconsTopRight = document.querySelectorAll('.icon-top-right');
+    allIconsTopRight.forEach(function(iconTopRight) {
+        iconTopRight.classList.remove('zoom');
+    })
 
-        // Run the callback
-        console.log('Scrolling has stopped.');
-
-        allIcons.forEach(function(icon) {
-            if (icon.classList.contains('rotate')) {
-                icon.classList.remove('rotate');
-                icon.classList.add('finish')
-            }
-        });
-    }, 100);
-
-}, false);
+    const allIconsSection = document.querySelectorAll('.icon-top-right');
+    allIconsSection.forEach(function(iconSection) {
+        iconSection.classList.remove('ghost');
+    })
+}
