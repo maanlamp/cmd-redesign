@@ -19,8 +19,12 @@ body >:not(header) img{
 	width: 50%;
 }
 
+body >:not(header) img[src$='.jpg']{
+	filter: var(--imgShadowYellow);
+}
+
 body h1:first-of-type{
-    border: 1px solid black;
+    border: 1px solid var(--cmdBlack);
     margin: 2em auto 0 auto;
     padding: 0.2em;
     background: black;
@@ -68,25 +72,31 @@ body h2:nth-of-type(odd) + p{
 
 body h2:nth-of-type(even) + p{
 	float: right;
-	background: yellow;
 	text-align: right;
 	width: 50%;
 }
 
-/*body p img:nth-of-type(odd){
-	text-align: right;
-	float: right;
+body h2:nth-of-type(2),
+body h2:last-of-type{
+    background-color: var(--cmdYellow);
+    margin: 0;
+    padding-bottom: 0.5em;
 }
 
-body p img:nth-of-type(even){
-	text-align: left;
-	float: left;
-}*/
+body h2:nth-of-type(2) + p,
+body h2:last-of-type + p{
+    background-color: var(--cmdYellow);
+}
+
+
+body h2:nth-of-type(2) + p> img[src$='.jpg'],
+body h2:last-of-type + p> img[src$='.jpg']{
+    background-color: var(--cmdWhite);
+}
 
 body h2:nth-of-type(even) + p + p{
 	text-align: right;
 	float: right;
-	background: yellow;
 	width: 50%;
 }
 
@@ -94,6 +104,11 @@ body h2:nth-of-type(odd) + p + p{
 	text-align: left;
 	float: left;
 	width: 50%;
+}
+
+body h2:nth-of-type(2) + p + p,
+body h2:last-of-type + p + p{
+    background-color: var(--cmdYellow);
 }
 
 body p a{
