@@ -10,8 +10,12 @@
     "express": "^4.17.1",
     "remarkable": "^1.7.1"
   },
-  "devDependencies": {},
-  "scripts": {},
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "scripts": {
+    "compress:css": "node-sass static/css/home.css static/css/home.compressed.css --output-style compressed"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maanlamp/cmd-redesign.git"
