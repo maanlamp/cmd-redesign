@@ -1,0 +1,122 @@
+@import url("common.css");
+
+body{
+	display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+body > *:not(header){
+	padding: 2em;
+	clear: both;
+}
+
+body p{
+	width: 100%;
+}
+
+body >:not(header) img{
+	width: 50%;
+}
+
+body h1:first-of-type{
+    border: 1px solid black;
+    margin: 2em auto 0 auto;
+    padding: 0.2em;
+    background: black;
+    color: white;
+    font-weight: 100;
+}
+
+body h1 + p:first-of-type{
+	border: 1px solid black;
+    padding: 0.2em;
+    background: white;
+    color: black;
+    font-size: 3em;
+    margin: auto;
+    text-align: left;
+    width: 100%;
+    margin-left: 45%;
+    margin-right: 10%;
+}
+
+body h1 + p + p > img{
+	width: 100%;
+	border: none;
+}
+
+body h2{
+	width: 100%;
+}
+
+body h2:nth-of-type(odd){
+	text-align: left;
+	padding: 2em 2em 0 2em;
+}
+
+body h2:nth-of-type(even){
+	text-align: right;
+	padding: 2em 2em 0 2em;
+}
+
+body h2:nth-of-type(odd) + p{
+	float: left;
+	text-align: left;
+	width: 50%;
+}
+
+body h2:nth-of-type(even) + p{
+	float: right;
+	background: yellow;
+	text-align: right;
+	width: 50%;
+}
+
+/*body p img:nth-of-type(odd){
+	text-align: right;
+	float: right;
+}
+
+body p img:nth-of-type(even){
+	text-align: left;
+	float: left;
+}*/
+
+body h2:nth-of-type(even) + p + p{
+	text-align: right;
+	float: right;
+	background: yellow;
+	width: 50%;
+}
+
+body h2:nth-of-type(odd) + p + p{
+	text-align: left;
+	float: left;
+	width: 50%;
+}
+
+body p a{
+    background-color: var(--cmdBlack);
+    color: var(--cmdWhite);
+    padding: 0.75em 4em;
+    font-size: inherit;
+    text-align: center;
+    cursor: pointer;
+    width: auto;
+    text-decoration: none;
+    margin: 1em;
+    display: inline-block;
+}
+
+body h3{
+	width: 25%;
+}
+
+body h3 + p{
+	width: 25%;
+}
+
+body h3 + p + p{
+	width: 25%;
+}
