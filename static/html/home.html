@@ -248,6 +248,23 @@
 	<button class="back-to-top">&#8593;</button>
 
 	<script src="../js/lazyloading.js"></script>
+
+	<script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker
+                    .register('/service-worker.js')
+                    .then(function (registration) {
+                        registration.update();
+                        console.log('Service Worker: Registered');
+                    }).catch(function (error) {
+                        console.log(error);
+                    });
+            });
+        } else {
+			console.log('Service Worker not available');
+		}
+    </script>
 </body>
 
 </html>
