@@ -471,7 +471,7 @@ footer.footer {
 
 @media(max-width: 650px) {
     section.hero-image {
-        height: 75vh;
+        height: 50vh;
     }
 
     .hero-image__textblock {
