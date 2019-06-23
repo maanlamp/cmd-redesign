@@ -20,7 +20,7 @@ body >:not(header) img{
 }
 
 body >:not(header) img[src$='.jpg']{
-	filter: var(--imgShadowYellow);
+	filter: var(--imgShadowWhite);
 }
 
 body h1:first-of-type{
@@ -133,6 +133,11 @@ body h2:nth-of-type(odd) + p + p > img{
 	margin-left: 15%;
 }
 
+body h2:nth-of-type(odd) + p > img[src$='.jpg'],
+body h2:nth-of-type(odd) + p + p > img[src$='.jpg']{
+	filter: var(--imgShadowYellow);
+}
+
 body p a{
     background-color: var(--cmdBlack);
     color: var(--cmdWhite);
@@ -148,16 +153,109 @@ body p a{
 }
 
 body h3{
-	float: left;
-	width: 50%;
+	text-align: left;
+	width: 100%;
+	padding: 2em 4.5em 0 4.2em;
 }
 
-body h3 + p{
+body h3 + p {
+	text-align: left;
 	float: left;
 	width: 50%;
+	padding: 5em;
+    padding-top: 1em;
 }
 
 body h3 + p + p{
 	float: left;
 	width: 50%;
+	padding: 5em;
+    padding-top: 1em;
+}
+
+@media(max-width: 800px) {
+    body h1 + p:first-of-type{
+    	font-size: 2em;
+    }
+
+    body h2:nth-of-type(odd){
+    	padding: 2em 2em 0 2em;
+	}
+
+    body h2:nth-of-type(odd) + p{
+		padding: 0 3em;
+		padding-bottom: 2em;
+	}
+
+    body h2:nth-of-type(odd) + p + p{
+		padding: 0;
+	}
+
+	body h2:nth-of-type(even){
+    	/*padding: 2em 2em 0 2em;*/
+	}
+
+    body h2:nth-of-type(even) + p{
+		padding: 0 3em;
+		padding-bottom: 2em;
+	}
+
+    body h2:nth-of-type(even) + p + p{
+		padding-bottom: 2em;
+	}
+
+    
+}
+
+@media(max-width: 650px) {
+    body h2:nth-of-type(odd) + p{
+		width: 100%;
+	}
+
+	body h2:nth-of-type(even){
+    	padding: 2em 2em 0 2em;
+	}
+
+	body h2:nth-of-type(even) + p{
+		padding: 0;
+	}
+
+	body h2:nth-of-type(even) + p + p{
+		width: 100%;
+		padding-left: 3em;
+	}
+
+	body h2:nth-of-type(even) + p  > img{
+		display: none;
+	}
+
+	body h2:nth-of-type(odd) + p + p > img{
+		display: none;
+	}
+
+	body h3{
+		padding: 2em 2.5em 0 2.5em;
+	}
+
+	body h3 + p{
+		width: 100%;
+		padding: 1em 3em;
+	}
+
+	body h3 + p + p{
+		width: 100%;
+		padding: 1em 3em;
+	}
+}
+
+@media(max-width: 450px) {
+    body h1 + p:first-of-type{
+        font-size: 1.8em;
+    }
+}
+
+@media(max-width: 400px) {
+    body h1 + p:first-of-type{
+        font-size: 1.6em;
+    }
 }
