@@ -24,14 +24,37 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         // Possibly fall back to a more compatible method here
 
-        lazyImages.forEach(function(image) {
+        lazyImages.forEach(function (image) {
             image.src = image.dataset.src;
             image.srcset = image.dataset.srcset;
-            
-            if(image.classList.contains('lazy')) {
+
+            if (image.classList.contains('lazy')) {
                 image.classList.remove('lazy');
             }
         });
     }
-});
 
+    const topBtn = document.querySelector('#top-button');
+    topBtn.href = '';
+    topBtn.style.display = 'none';
+    topBtn.addEventListener('click', function () {
+        scrollToTop(5000);
+    });
+
+    window.onscroll = function () {
+        if (window.pageYOffset > 500) {
+            topBtn.style.display = 'block';
+        } else {
+            topBtn.style.display = 'none';
+        }
+    };
+
+    function scrollToTop(scrollDuration) {
+        var scrollStep = -window.scrollY / (scrollDuration / 15),
+            scrollInterval = setInterval(function () {
+                if (window.scrollY != 0) {
+                    window.scrollBy(0, scrollStep);
+                } else clearInterval(scrollInterval);
+            }, 15);
+    }
+});
