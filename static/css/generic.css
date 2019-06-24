@@ -24,7 +24,7 @@ body >:not(header) img[src$='.jpg']{
 }
 
 body h1:first-of-type{
-    border: 1px solid var(--cmdBlack);
+    border: 3px solid var(--cmdBlack);
     margin: 2em auto 0 auto;
     padding: 0.2em;
     background: black;
@@ -33,7 +33,7 @@ body h1:first-of-type{
 }
 
 body h1 + p:first-of-type{
-	border: 1px solid black;
+	border: 3px solid black;
     padding: 0.2em;
     background: white;
     color: black;
