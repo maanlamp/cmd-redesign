@@ -305,7 +305,6 @@ section {
 }
 
 @media(max-width: 800px) {
-
     .icon {
         display: none;
     }
@@ -313,6 +312,7 @@ section {
     section {
         padding: 32px 48px;
         padding: 2em 3em;
+        padding: 0;
     }
 
     h1 {
@@ -321,8 +321,8 @@ section {
     }
 
     .block-fill {
-        padding: 16px 12px;
-        padding: 1em 0.8em;
+        padding: 4px;
+        padding: 0.3em;
         margin: 0;
     }
 }
