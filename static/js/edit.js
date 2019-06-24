@@ -31,19 +31,19 @@ void function initTextarea () {
 		});
 	}
 
-	function HTMLPostprocessor(raw) {
+	function HTMLPostprocessor (raw) {
 		const elements = Array.from(new DOMParser().parseFromString(raw, "text/html").body.children);
 
 		return elements
-			.map(el => {
-				if (el.nodeName === "P" && el.childElementCount === 1 && el.firstElementChild.nodeName === "IMG") {
-					const img = el.firstElementChild;
-					img.setAttribute("title", img.getAttribute("alt"));
-					return img;
-				}
+			// .map(el => { //This code extracts images in paragraphs and sets their titles, but it screws up the css
+			// 	if (el.nodeName === "P" && el.childElementCount === 1 && el.firstElementChild.nodeName === "IMG") {
+			// 		const img = el.firstElementChild;
+			// 		img.setAttribute("title", img.getAttribute("alt"));
+			// 		return img;
+			// 	}
 
-				return el;
-			});
+			// 	return el;
+			// });
 	}
 
 	async function updateOutput () {
