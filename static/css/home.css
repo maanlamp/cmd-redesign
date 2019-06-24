@@ -438,7 +438,7 @@ footer.footer {
     background-image: url('../images/social/linkdin-logo.svg');
 }
 
-.back-to-top {
+#top-button {
     box-shadow: none;
     position: fixed;
     right: 50px;
@@ -458,10 +458,16 @@ footer.footer {
     font-weight: 700;
     padding-top: 15px;
     z-index: 99;
+    opacity: 0;
+    transition: opacity .5s ease;
 }
 
-.back-to-top:hover {
+#top-button:hover {
     background-color: #222;
+}
+
+#top-button.visible {
+    opacity: 1;
 }
 
 @media(max-width: 1000px) {
