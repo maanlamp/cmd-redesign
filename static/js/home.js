@@ -1,7 +1,7 @@
 import just from "./just.js/just.min.js";
 
 void function lazyload () {
-	const lazyImages = just.select(document.querySelectorAll("img.lazy"));
+	const lazyImages = just.select("img.lazy");
 
 	function loadAndClean (images) {
 		images.each(image => {
