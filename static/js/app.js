@@ -1,7 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
-    if ("IntersectionObserver" in window) {
+    if("loading" in HTMLImageElement.prototype) {
+        lazyImages.forEach(function (image) {
+            image.src = image.dataset.src;
+            image.srcset = image.dataset.srcset;
+
+            if (image.classList.contains("lazy")) {
+                image.classList.remove("lazy");
+            }
+        });
+    }
+    else if ("IntersectionObserver" in window) {
         let lazyImageObserver = new IntersectionObserver(function (entries, observer) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
@@ -28,24 +38,24 @@ document.addEventListener("DOMContentLoaded", function () {
             image.src = image.dataset.src;
             image.srcset = image.dataset.srcset;
 
-            if (image.classList.contains('lazy')) {
-                image.classList.remove('lazy');
+            if (image.classList.contains("lazy")) {
+                image.classList.remove("lazy");
             }
         });
     }
 
-    const topBtn = document.querySelector('#top-button');
-    topBtn.href = '';
-    topBtn.style.display = 'none';
-    topBtn.addEventListener('click', function () {
+    const topBtn = document.querySelector("#top-button");
+    topBtn.href = "";
+    topBtn.style.display = "none";
+    topBtn.addEventListener("click", function () {
         scrollToTop(5000);
     });
 
     window.onscroll = function () {
         if (window.pageYOffset > 500) {
-            topBtn.style.display = 'block';
+            topBtn.style.display = "block";
         } else {
-            topBtn.style.display = 'none';
+            topBtn.style.display = "none";
         }
     };
 
@@ -62,61 +72,61 @@ document.addEventListener("DOMContentLoaded", function () {
     window.onscroll = function (e) {
         isScrolling = true;
         if (isScrolling) {
-            const allIconsTopLeft = document.querySelectorAll('.icon-top-left');
+            const allIconsTopLeft = document.querySelectorAll(".icon-top-left");
             allIconsTopLeft.forEach(function (iconTopLeft) {
-                iconTopLeft.classList.add('rotate');
+                iconTopLeft.classList.add("rotate");
             })
 
-            const allIconsBottomLeft = document.querySelectorAll('.icon-bottom-left');
+            const allIconsBottomLeft = document.querySelectorAll(".icon-bottom-left");
             allIconsBottomLeft.forEach(function (iconBottomLeft) {
-                iconBottomLeft.classList.add('bounce');
+                iconBottomLeft.classList.add("bounce");
             })
 
-            const allIconsBottomRight = document.querySelectorAll('.icon-bottom-right');
+            const allIconsBottomRight = document.querySelectorAll(".icon-bottom-right");
             allIconsBottomRight.forEach(function (iconBottomRight) {
-                iconBottomRight.classList.add('shake');
+                iconBottomRight.classList.add("shake");
             })
 
-            const allIconsTopRight = document.querySelectorAll('.icon-top-right');
+            const allIconsTopRight = document.querySelectorAll(".icon-top-right");
             allIconsTopRight.forEach(function (iconTopRight) {
-                iconTopRight.classList.add('zoom');
+                iconTopRight.classList.add("zoom");
             })
 
-            const allIconsSection = document.querySelectorAll('.icon-section');
+            const allIconsSection = document.querySelectorAll(".icon-section");
             allIconsSection.forEach(function (iconSection) {
-                iconSection.classList.add('ghost');
+                iconSection.classList.add("ghost");
             })
 
             setTimeout(stopScrolling, 1000);
         } else {
-            console.log('oops!')
+            console.log("oops!")
         }
     }
 
     function stopScrolling() {
-        const allIconsTopLeft = document.querySelectorAll('.icon-top-left');
+        const allIconsTopLeft = document.querySelectorAll(".icon-top-left");
         allIconsTopLeft.forEach(function (iconTopLeft) {
-            iconTopLeft.classList.remove('rotate');
+            iconTopLeft.classList.remove("rotate");
         })
 
-        const allIconsBottomLeft = document.querySelectorAll('.icon-bottom-left');
+        const allIconsBottomLeft = document.querySelectorAll(".icon-bottom-left");
         allIconsBottomLeft.forEach(function (iconBottomLeft) {
-            iconBottomLeft.classList.remove('bounce');
+            iconBottomLeft.classList.remove("bounce");
         })
 
-        const allIconsBottomRight = document.querySelectorAll('.icon-bottom-right');
+        const allIconsBottomRight = document.querySelectorAll(".icon-bottom-right");
         allIconsBottomRight.forEach(function (iconBottomRight) {
-            iconBottomRight.classList.remove('shake');
+            iconBottomRight.classList.remove("shake");
         })
 
-        const allIconsTopRight = document.querySelectorAll('.icon-top-right');
+        const allIconsTopRight = document.querySelectorAll(".icon-top-right");
         allIconsTopRight.forEach(function (iconTopRight) {
-            iconTopRight.classList.remove('zoom');
+            iconTopRight.classList.remove("zoom");
         })
 
-        const allIconsSection = document.querySelectorAll('.icon-top-right');
+        const allIconsSection = document.querySelectorAll(".icon-top-right");
         allIconsSection.forEach(function (iconSection) {
-            iconSection.classList.remove('ghost');
+            iconSection.classList.remove("ghost");
         })
     }
 });
