@@ -167,6 +167,14 @@ class DB {
 						+ "\n\nVoor meer vragen rondom stages kunt u contact opnemen met ons stagebureau. Onze stagecoördinator Jos Kok komt graag met u in gesprek over de mogelijkheden."
 						+ "\n\nHet CMD Stagebureau is bereikbaar via mail of 06 – 21157122 (stagecoördinator Jos Kok). Jos is naast stagecoördinator ook nog docent bij CMD, dus hij doet zijn best om zo snel mogelijk alle verzoeken te beantwoorden."
 						+ "\n\n[Mail onze stagebureau](#)"	
+				}),
+								new Entry({
+				title: "offline",
+				raw: "# Je bent offline"
+					+ "\nMaar dit kun je nog lezen"
+					+ "\n\n[Info over deze opleiding](/read/cmd)"
+					+ "\n[Info over de studievakken](/read/vakken)"
+					+ "\n[Samenwerken met CMD](/read/doorgroeien)"
 				})
 			];
 		}

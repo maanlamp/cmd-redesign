@@ -345,7 +345,7 @@ section.staff {
 
 /* Banner */
 section.banner {
-    background-color: #FFF021
+    background-color: #FFF021;
     background-color: var(--cmdYellow);
 
     display: flex;

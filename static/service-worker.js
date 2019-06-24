@@ -4,7 +4,12 @@ const cacheName = 'cmd-amsterdam-v1';
 
 const cacheAssets = [
     '/',
-    'css/home.css'
+    'css/home.css',
+    'css/generic.css',
+    '/read/cmd',
+    '/read/vakken',
+    '/read/doorgroeien',
+    '/read/offline'
     // Cache JavaScript later
 ];
 
@@ -67,7 +72,7 @@ self.addEventListener('fetch', function(e) {
                 } else {
                     // Otherwise. Return the offline page.
                     return caches.open(cacheName).then(cache => {
-                        return cache.match('/offline').then(response => {
+                        return cache.match('/read/offline').then(response => {
                             return response;
                         });
                     });
