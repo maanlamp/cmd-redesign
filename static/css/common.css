@@ -145,16 +145,18 @@ section {
 .block-border {
     border: 3px solid var(--cmdBlack);
     padding: 0.2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-right: auto;
+    margin-left: auto;
 }
 
-
 .block-fill {
-    border: 3px solid var(--cmdBlack);
-    background: var(--cmdBlack);
+    background-color: black;
     color: white;
-    padding: 1em 0;
-    margin-right: -3em;
+    padding: 0.3em;
     margin-left: 3em;
+    margin-right: -3em;
+    text-align: left;
 }
 
 section {

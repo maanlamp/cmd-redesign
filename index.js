@@ -2,12 +2,14 @@ const PORT = 1337;
 const express = require("express");
 const routes = require("./routes/routes.js");
 const bodyparser = require("body-parser").json();
+const compression = require("compression");
 
 //Setup app
 const app = express();
 app.set("view engine", "ejs");
 app.use(bodyparser);
 app.use(express.static(__dirname + "/static"));
+app.use(compression());
 
 //Define routes
 app.get("/",              routes.home);
