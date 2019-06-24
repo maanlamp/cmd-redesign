@@ -82,11 +82,13 @@ section a,
 .btn {
     background-color: var(--cmdBlack);
     color: var(--cmdWhite);
+    padding: 12px 48px;
     padding: 0.75em 4em;
     font-size: inherit;
     text-align: center;
     cursor: pointer;
     margin-top: 1em;
+    margin-top: 16px;
     display: block;
     width: 60%;
     text-decoration: none;
@@ -144,6 +146,7 @@ section {
 
 .block-border {
     border: 3px solid var(--cmdBlack);
+    padding: 3px;
     padding: 0.2em;
     background-color: rgba(255, 255, 255, 0.8);
     margin-right: auto;
@@ -153,8 +156,11 @@ section {
 .block-fill {
     background-color: black;
     color: white;
+    padding: 4px;
     padding: 0.3em;
+    margin-left: 48px;
     margin-left: 3em;
+    margin-right: -48px;
     margin-right: -3em;
     text-align: left;
 }
@@ -255,6 +261,7 @@ section {
 @media (max-width: 1050px) {
     .header {
         flex-wrap: wrap;
+        padding: 8px;
         padding: 0.5em;
     }
 
@@ -304,14 +311,17 @@ section {
     }
 
     section {
+        padding: 32px 48px;
         padding: 2em 3em;
     }
 
     h1 {
+        font-size: 32px;
         font-size: 2em;
     }
 
     .block-fill {
+        padding: 16px 12px;
         padding: 1em 0.8em;
         margin: 0;
     }
@@ -319,16 +329,19 @@ section {
 
 @media(max-width: 450px) {
     h1 {
+        font-size: 28px;
         font-size: 1.8em;
     }
 }
 
 @media(max-width: 400px) {
     h1 {
+        font-size: 25px;
         font-size: 1.6em;
     }
 
     section {
+        padding: 24px 32px;
         padding: 1.5em 2em;
     }
 }

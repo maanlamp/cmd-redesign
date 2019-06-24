@@ -4,6 +4,7 @@ section.hero-image {
     display: flex;
     flex-direction: row;
     background-image: url(../images/cmd_daantjebons_0025_big.jpg);
+    height: 90%;
     height: 90vh;
 
     background-repeat: no-repeat;
@@ -19,6 +20,7 @@ section.hero-image {
 }
 
 .hero-image__image img {
+    width: 144px;
     width: 9em;
     height: auto;
 }
@@ -33,16 +35,20 @@ section.hero-image {
 }
 
 .hero-image__textblock p {
+    font-size: 48px;
     font-size: 3em;
 }
 
 .hero-image .icon {
     position: absolute;
+    bottom: 20%;
     bottom: 10vh;
+    left: 5%;
     left: 5vw;
 }
 
 section.cmd {
+    background-color: #FFF021;
     background-color: var(--cmdYellow);
     display: flex;
     flex-direction: row;
@@ -55,10 +61,12 @@ section.cmd {
 
 .cmd__image .primary-image {
     width: 100%;
+    filter: #FFFFFF;
     filter: var(--imgShadowWhite);
 }
 
 .cmd__textblock {
+    width: 50%;
     width: var(--text-block-width);
     margin-right: 10%;
 }
@@ -76,15 +84,18 @@ section.subjects {
 .subjects__image .primary-image {
     width: 100%;
     filter: var(--imgShadowYellow);
+    margin-left: 24px;
     margin-left: 1.5em;
 }
 
 .subjects__textblock {
+    width: 50%;
     width: var(--text-block-width);
     margin-left: 5%;
 }
 
 section.studentenwerk {
+    background-color: #FFFFFF;
     background-color: var(--cmdWhite);
 }
 
@@ -160,11 +171,13 @@ section.grow {
 }
 
 .grow__textblock ul {
+    padding-left: 32px;
     padding-left: 2em;
 }
 
 
 section.work-together {
+    background-color: #FFF021;
     background-color: var(--cmdYellow);
     flex-direction: row;
     display: flex;
@@ -181,6 +194,7 @@ section.work-together {
 }
 
 .work-together__textblock ul {
+    padding-left: 32px;
     padding-left: 2em;
 }
 
@@ -190,10 +204,12 @@ section.work-together {
 }
 
 .work-together a {
+    box-shadow: 0px 4px 0px #FFFFFF;
     box-shadow: 0px 4px 0px var(--cmdShadowWhite);
 }
 
 section.contact {
+    background-color: #242424;
     background-color: var(--cmdBlack);
 }
 
@@ -210,6 +226,7 @@ section.contact {
     display: flex;
     flex-direction: column;
     width: 33%;
+    margin-right: 16px;
     margin-right: 1em;
 }
 
@@ -222,8 +239,10 @@ section.contact {
 .contact form input,
 .contact form textarea {
     border: none;
+    padding: 16px 24px;
     padding: 1em 1.5em;
     margin: 0.5em 0;
+    margin: 8px 0;
     min-width: 100%;
     font-size: 16px;
     resize: none;
@@ -242,6 +261,7 @@ section.contact {
     width: 100%;
     border-radius: 0;
     text-align: left;
+    padding: 16px 24px;
     padding: 1em 1.5em;
     margin-top: 0;
 }
@@ -249,7 +269,9 @@ section.contact {
 .contact .dropdown {
     position: relative;
     display: inline-block;
+    margin-bottom: 8px;
     margin-bottom: 0.5em;
+    margin-top: 8px;
     margin-top: 0.5em;
 }
 
@@ -266,6 +288,7 @@ section.contact {
 .contact .dropdown-content a {
     text-align: left;
     color: black;
+    padding: 16px 24px;
     padding: 1em 1.5em;
     text-decoration: none;
     display: block;
@@ -288,6 +311,7 @@ section.contact {
 }
 
 .contact button.btn--secondary {
+    margin-top: 8px;
     margin-top: 0.5em;
     width: 33%;
     margin-left: auto;
@@ -301,14 +325,17 @@ section.contact {
 }
 
 section.staff {
+    background-color: #FFFFFF;
     background-color: var(--cmdWhite);
 
     display: flex;
     justify-content: space-around;
+    margin-top: 32px;
     margin-top: 2em;
 }
 
 .card__name {
+    margin-top: 8px;
     margin-top: 0.5em;
 }
 
@@ -318,6 +345,7 @@ section.staff {
 
 /* Banner */
 section.banner {
+    background-color: #FFF021
     background-color: var(--cmdYellow);
 
     display: flex;
@@ -327,8 +355,10 @@ section.banner {
 }
 
 .banner .banner__title {
+    font-size: 32px;
     font-size: 2em;
     font-weight: 400;
+    margin-right: 32px;
     margin-right: 2em;
     left: 0;
     margin-left: auto;
@@ -337,20 +367,25 @@ section.banner {
 
 .banner .banner__button {
     text-decoration: none;
+    background-color: #242424;
+    background-color: #242424;
     background-color: var(--cmdBlack);
     color: white;
+    padding: 16px 24px;
     padding: 1em 1.5em;
     right: 0;
     text-transform: uppercase;
     box-shadow: none;
     border-radius: 0;
     width: 30%;
+    margin: 32px 16px 32px 0px;
     margin: 2em 1em 2em 0em;
     margin-right: auto;
 }
 
 /* Footer */
 footer.footer {
+    background-color: #242424;
     background-color: var(--cmdBlack);
     width: 100%;
     display: flex;
@@ -359,6 +394,7 @@ footer.footer {
 }
 
 .footer .footer__copyright {
+    color: #FFFFFF;
     color: var(--cmdWhite);
     align-self: center;
     margin-left: 40px;
@@ -414,7 +450,9 @@ footer.footer {
     text-align: center;
     padding: 0;
     cursor: pointer;
+    background-color: #242424;
     background-color: var(--cmdBlack);
+    color: #FFFFFF;
     color: var(--cmdWhite);
     text-decoration: none;
     font-weight: 700;
@@ -437,6 +475,7 @@ footer.footer {
 
     section.staff {
         justify-content: space-between;
+        padding: 48px;
         padding: 3em;
     }
 }
@@ -471,12 +510,14 @@ footer.footer {
     .staff .staff__card {
         width: 50%;
         text-align: center;
+        margin: 8px 0px;
         margin: 0.5em 0;
     }
 }
 
 @media(max-width: 650px) {
     section.hero-image {
+        height: 50%;
         height: 50vh;
     }
 
@@ -612,11 +653,13 @@ footer.footer {
 
     section.banner {
         flex-direction: column;
+        padding: 16px;
         padding: 1em;
     }
 
     .banner .banner__title {
         margin: 0 auto;
+        margin-bottom: 8px;
         margin-bottom: 0.5em;
         text-align: center;
     }
@@ -630,6 +673,7 @@ footer.footer {
 @media(max-width: 450px) {
     section.hero-image {
         background-size: cover;
+        height: 50%;
         height: 50vh;
     }
 
