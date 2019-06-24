@@ -8,8 +8,8 @@ const compression = require("compression");
 const app = express();
 app.set("view engine", "ejs");
 app.use(bodyparser);
-app.use(express.static(__dirname + "/static"));
 app.use(compression());
+app.use(express.static(__dirname + "/static"));
 
 //Define routes
 app.get("/",              routes.home);
