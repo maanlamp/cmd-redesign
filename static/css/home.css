@@ -398,8 +398,17 @@ footer.footer {
     background-color: var(--cmdBlack);
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding: 15px;
+}
+
+.footer .footer__logo {
+    display: inherit;
+    margin-left: 80px;
+}
+
+.footer .footer__logo img {
+    width: 200px;
 }
 
 .footer .footer__copyright {
@@ -407,6 +416,7 @@ footer.footer {
     color: var(--cmdWhite);
     align-self: center;
     margin-left: 40px;
+    flex-grow: 1;
 }
 
 .footer .footer__social {
@@ -540,6 +550,14 @@ footer.footer {
         text-align: center;
         margin: 8px 0px;
         margin: 0.5em 0;
+    }
+
+    .footer .footer__logo {
+        margin-left: 0;
+    }
+
+    .footer .footer__social {
+        margin-right: 0;
     }
 }
 

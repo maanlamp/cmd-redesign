@@ -92,6 +92,15 @@ section a,
     display: block;
     width: 60%;
     text-decoration: none;
+    transition: all 500ms ease;
+
+}
+
+button:hover,
+section a:hover,
+.btn:hover {
+    transform: scale(1.1);
+    transform-origin: center center;
 }
 
 .btn--white-shadow {
@@ -182,13 +191,12 @@ section {
 }
 
 .header .logo-container {
-    width: 200px;
+    width: 90px;
     margin: auto 50px;
 }
 
 .header .logo-container .header__logo {
     width: 100%;
-    min-width: 200px;
     display: inherit;
 }
 
