@@ -1,6 +1,9 @@
 const database = require("../database/database.js");
 const Remarkable = require("remarkable");
-const md = new Remarkable();
+const md = new Remarkable({
+	html: true,
+	typographer: true
+});
 
 function edit (req, res) {
 	const { title } = req.params;
@@ -13,10 +16,19 @@ function home(req, res) {
 
 function read (req, res) {
 	const { title } = req.params;
+
+	function markdownPreprocessor (md) {
+		const components = require("../database/components.js");
+		return md.replace(/#\{.+?\}/g, match => {
+			const name = match.match(/#\{(.+?)\}/)[1];
+			return (components.find(comp => comp.name === name) || {}).value || "";
+		});
+	}
+
 	if (!database.exists(title))
 		res.status(404).end(`Page "${title}" Not Found.`);
 	else
-		res.render("read", { title, html: md.render(database.get(title).raw) });
+		res.render("read", { title, html: md.render(markdownPreprocessor(database.get(title).raw)) });
 }
 
 async function save (req, res) {
