@@ -392,103 +392,6 @@ section.banner {
     margin-right: auto;
 }
 
-/* Footer */
-footer.footer {
-    background-color: #242424;
-    background-color: var(--cmdBlack);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-}
-
-.footer .footer__logo {
-    display: inherit;
-    margin-left: 80px;
-}
-
-.footer .footer__logo img {
-    width: 200px;
-}
-
-.footer .footer__copyright {
-    color: #FFFFFF;
-    color: var(--cmdWhite);
-    align-self: center;
-    margin-left: 40px;
-    flex-grow: 1;
-}
-
-.footer .footer__social {
-    display: flex;
-    margin-right: 80px;
-}
-
-.footer .footer__social li {
-    margin: 10px;
-    cursor: pointer;
-    width: 20px;
-}
-
-.footer .footer__social li a {
-    width: 25px;
-    height: 25px;
-    background-size: cover;
-    position: absolute;
-}
-
-.footer .footer__social li a:hover {
-    opacity: .5;
-}
-
-.footer .footer__social li a#twitter-logo {
-    background-image: url('../images/social/twitter-logo.svg');
-}
-
-.footer .footer__social li a#facebook-logo {
-    background-image: url('../images/social/facebook-logo.svg');
-}
-
-.footer .footer__social li a#vimeo-logo {
-    background-image: url('../images/social/vimeo-logo.svg');
-}
-
-.footer .footer__social li a#linkdin-logo {
-    background-image: url('../images/social/linkdin-logo.svg');
-}
-
-#top-button {
-    box-shadow: none;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    width: 50px;
-    line-height: 1;
-    height: 50px;
-    font-size: 18px;
-    text-align: center;
-    padding: 0;
-    cursor: pointer;
-    background-color: #242424;
-    background-color: var(--cmdBlack);
-    color: #FFFFFF;
-    color: var(--cmdWhite);
-    text-decoration: none;
-    font-weight: 700;
-    padding-top: 15px;
-    z-index: 99;
-    opacity: 0;
-    transition: opacity .5s ease;
-}
-
-#top-button:hover {
-    background-color: #222;
-}
-
-#top-button.visible {
-    opacity: 1;
-}
-
 @media(max-width: 1050px) {
     .hero-image__textblock p {
         margin-left: 16px;
@@ -550,14 +453,6 @@ footer.footer {
         text-align: center;
         margin: 8px 0px;
         margin: 0.5em 0;
-    }
-
-    .footer .footer__logo {
-        margin-left: 0;
-    }
-
-    .footer .footer__social {
-        margin-right: 0;
     }
 }
 
@@ -753,14 +648,6 @@ footer.footer {
 
     .banner .banner__button {
         width: 100%;
-    }
-
-    .footer .footer__copyright {
-        margin-left: 0;
-    }
-
-    .footer .footer__social {
-        margin-right: 0;
     }
 }
 
