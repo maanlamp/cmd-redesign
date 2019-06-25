@@ -6,8 +6,10 @@ void function lazyload () {
 
 	function loadAndClean (images) {
 		images.each(image => {
-			image.src = image.dataset.src;
-			image.srcset = image.dataset.srcset;
+			if (image.dataset.src)
+				image.src = image.dataset.src;
+			if (image.dataset.srcset)
+				image.srcset = image.dataset.srcset;
 
 			just
 				.select(image)
@@ -21,6 +23,7 @@ void function lazyload () {
 	}
 
 	if ("loading" in HTMLImageElement.prototype) {
+		console.log("NATIVE");
 		loadAndClean(lazyImages);
 	} else if ("IntersectionObserver" in window) {
 		const lazyImageObserver = new IntersectionObserver(entries => {
