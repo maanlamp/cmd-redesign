@@ -6,40 +6,42 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/generic.css">
+    <link rel="stylesheet" href="/css/home.css">
 	<title><%= title -%></title>
 </head>
 <body>
     <header class="header">
-        <a class="logo-container" aria-label="Home" href="/#">
-        	<img src="../images/logo.png" alt="HVA logo" class="header__logo">
-        </a>
-
-        <input class="menu-btn" type="checkbox" id="menu-hamburger">
-        <label class="menu-icon" for="menu-hamburger"><img class="hambuger-image" src="../images/hamburger-icon.svg" alt="Hamburger icon"></label>
-
-        <nav class="header__nav">
-            <ul class="nav">
-                <li><a href="/read/studentenwerk">Studentenwerk</a></li>
-                <li><a href="/read/cmd">CMD</a></li>
-                <li><a href="/read/vakken">Studievakken</a></li>
-                <li><a href="/read/doorgroeien">Doorgroeien</a></li>
-                <li><a href="/read/samenwerken">Samenwerken</a></li>
-                <li><a href="/read/contact">Contact</a></li>
-                <li class="search"><a href="#"><img class="search-icon" src="../images/search.svg" alt="Search icon"></a></li>
-                <li class="netherlands"><a href="#"><img src="../images/netherlands-flag.png" alt="netherlands flas"></a></li>
-                <li class="english"><a href="#"><img src="../images/english-flag.png" alt="english flag"></a></li>
-            </ul>
-        </nav>
-    </header>
+		<a class="logo-container" aria-label="Home" href="/#">
+			<img loading="lazy" src="../images/cmd-logo.svg" alt="CMD logo" class="header__logo">
+		</a>
+		
+		<input class="menu-btn" type="checkbox" id="menu-hamburger">
+		<label class="menu-icon" for="menu-hamburger"><img loading="lazy" class="hambuger-image" src="../images/hamburger-icon.svg" alt=""></label>
+		
+		<nav class="header__nav">
+			<ul class="nav">
+				<li><a href="/read/studentenwerk">Studentenwerk</a></li>
+				<li><a href="/read/cmd">Over CMD</a></li>
+				<li><a href="/read/vakken">Studievakken</a></li>
+				<li><a href="/read/doorgroeien">Doorgroeien</a></li>
+				<li><a href="/read/samenwerken">Samenwerken</a></li>
+				<li><a href="/read/contact">Contact</a></li>
+				<li class="search"><a href="#"><img loading="lazy" src="../images/search.svg" alt="Zoeken"></a></li>
+				<li class="netherlands"><a href="#"><img loading="lazy" src="../images/netherlands-flag.png" alt="Verander de taal naar Nederlands"></a></li>
+				<li class="english"><a href="#"><img loading="lazy" src="../images/english-flag.png" alt="Verander de taal naar Engels"></a></li>
+			</ul>
+		</nav>
+	</header>
 	<%- html -%>
 
 	<footer class="footer">
+		<a href="http://www.hva.nl/" class="footer__logo"><img src="../images/hva-logo-white.png" alt="HVA logo"></a>
 		<p class="footer__copyright">&copy; 2019 CMD Amsterdam</p>
 		<ul class="footer__social">
-			<li><a href="" id="twitter-logo" aria-label="test"></a></li>
-			<li><a href="" id="facebook-logo" aria-label="test"></a></li>
-			<li><a href="" id="vimeo-logo" aria-label="test"></a></li>
-			<li><a href="" id="linkdin-logo" aria-label="test"></a></li>
+			<li><a href="" id="twitter-logo" aria-label="Vind CMD op Twitter"></a></li>
+			<li><a href="" id="facebook-logo" aria-label="Vind CMD op Facebook"></a></li>
+			<li><a href="" id="vimeo-logo" aria-label="Vind CMD op Vimeo"></a></li>
+			<li><a href="" id="linkdin-logo" aria-label="Vind CMD op LinkedIn"></a></li>
 		</ul>
 	</footer>
 </body>
