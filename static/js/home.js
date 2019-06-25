@@ -83,18 +83,26 @@ void function initAnimations () {
 				.remove("ghost");
 	}
 	
-	const timeout = new ResetableTimeout({
+	const stopTimeout = new ResetableTimeout({
 		timeout: 1000,
 		handler: stopScrolling
 	});
+
+	const startTimeout = new ResetableTimeout({
+		timeout: 50,
+		handler () {
+			console.log("SCROLL FIRED")
+			just.select(".icon-top-left").class.add("rotate");
+			just.select(".icon-bottom-left").class.add("bounce");
+			just.select(".icon-bottom-right").class.add("shake");
+			just.select(".icon-top-right").class.add("zoom");
+			just.select(".icon-section").class.add("ghost");
+			stopTimeout.reset();
+		}
+	});
 	
 	window.addEventListener("scroll", () => {
-		just.select(".icon-top-left").class.add("rotate");
-		just.select(".icon-bottom-left").class.add("bounce");
-		just.select(".icon-bottom-right").class.add("shake");
-		just.select(".icon-top-right").class.add("zoom");
-		just.select(".icon-section").class.add("ghost");
-		timeout.reset();
+		startTimeout.start();
 	});
 }();
 
