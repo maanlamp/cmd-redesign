@@ -265,6 +265,9 @@ section.contact {
     padding: 1em 1.5em;
     margin-top: 0;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
     font-size: 16px;
     margin: 8px 0;
     font-weight: 300;
