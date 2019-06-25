@@ -23,7 +23,6 @@ void function lazyload () {
 	}
 
 	if ("loading" in HTMLImageElement.prototype) {
-		console.log("NATIVE");
 		loadAndClean(lazyImages);
 	} else if ("IntersectionObserver" in window) {
 		const lazyImageObserver = new IntersectionObserver(entries => {
