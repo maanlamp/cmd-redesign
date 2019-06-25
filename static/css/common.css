@@ -465,3 +465,35 @@ footer.footer {
         padding: 1.5em 2em;
     }
 }
+
+@keyframes fadein {
+    from {
+        overflow: hidden;
+        opacity: 0;
+        transform: translateX(100vw);
+    } to {
+        overflow: initial;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+body:not(.no-fadein) {
+    animation: fadein .5s ease-out;
+}
+
+@keyframes fadeout {
+    from {
+        overflow: initial;
+        opacity: 1;
+        transform: translateX(0);
+    } to {
+        overflow: hidden;
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+}
+
+body.fadeout {
+    animation: fadeout .5s ease-out forwards;
+}
