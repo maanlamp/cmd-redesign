@@ -97,6 +97,8 @@ section.subjects {
 section.studentenwerk {
     background-color: #FFFFFF;
     background-color: var(--cmdWhite);
+    display: flex;
+    flex-direction: column;
 }
 
 .studentenwerk h2 {
@@ -119,9 +121,9 @@ section.studentenwerk {
 
 .studentenwerk a {
     display: inline-block;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    align-self: center;
     width: 31%;
+    position: relative;
 }
 
 .studentenwerk__article p {
