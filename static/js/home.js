@@ -1,4 +1,5 @@
 import just from "./just.js/just.min.js";
+import ResetableTimeout from "./Timeout.js";
 
 void function lazyload () {
 	const lazyImages = just.select("img.lazy");
@@ -70,15 +71,6 @@ void function initScrollToTopButton () {
 }();
 
 void function initAnimations () {
-	window.addEventListener("scroll", () => {
-		just.select(".icon-top-left").class.add("rotate");
-		just.select(".icon-bottom-left").class.add("bounce");
-		just.select(".icon-bottom-right").class.add("shake");
-		just.select(".icon-top-right").class.add("zoom");
-		just.select(".icon-section").class.add("ghost");
-		setTimeout(stopScrolling, 1000);
-	});
-	
 	function stopScrolling () {
 		just.select(".icon-top-left, .icon-bottom-left, .icon-bottom-right, .icon-top-right, .icon-section")
 			.class
@@ -87,8 +79,22 @@ void function initAnimations () {
 				.remove("shake")
 				.remove("zoom")
 				.remove("ghost");
-		}
-	}();
+	}
+	
+	const timeout = new ResetableTimeout({
+		timeout: 1000,
+		handler: stopScrolling
+	});
+	
+	window.addEventListener("scroll", () => {
+		just.select(".icon-top-left").class.add("rotate");
+		just.select(".icon-bottom-left").class.add("bounce");
+		just.select(".icon-bottom-right").class.add("shake");
+		just.select(".icon-top-right").class.add("zoom");
+		just.select(".icon-section").class.add("ghost");
+		timeout.reset();
+	});
+}();
 
 void function initServiceWorker () {
 	if (!("serviceWorker" in navigator))
@@ -100,8 +106,6 @@ void function initServiceWorker () {
 			.then(registration => {
 				registration.update();
 				console.log("Service Worker: Registered");
-			}).catch(error => {
-				console.log(error);
-			});
+			}).catch(console.error);
 	});
 }();
