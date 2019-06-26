@@ -3,7 +3,6 @@
 body{
 	display: flex;
     flex-wrap: wrap;
-    text-align: center;
 }
 
 body > *:not(header){
@@ -30,6 +29,7 @@ body h1:first-of-type{
     background: black;
     color: white;
     font-weight: 100;
+    width: max-content;
 }
 
 body h1 + p:first-of-type{
@@ -40,7 +40,7 @@ body h1 + p:first-of-type{
     font-size: 3em;
     margin: auto;
     text-align: left;
-    width: 100%;
+    width: max-content;
     margin-left: 45%;
     margin-right: 10%;
 }
@@ -148,8 +148,9 @@ body p a{
     width: auto;
     text-decoration: none;
     margin: 1em;
-    display: inline-block;
     margin-left: 0;
+    display: block;
+    width: max-content;
 }
 
 body h3{
@@ -171,6 +172,97 @@ body h3 + p + p{
 	width: 50%;
 	padding: 5em;
     padding-top: 1em;
+}
+
+
+body section.studentenwerk{
+	padding: 5em;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+body section.studentenwerk .studentenwerk__article {
+	width: 31%;
+	margin: 1%;
+}
+
+body section.studentenwerk h3{
+	padding: 1em 0;
+}
+
+body section.studentenwerk p{
+	padding: 0;
+	width: 100%;
+}
+
+body section.studentenwerk a{
+	width: 100%;
+}
+
+
+body section.studentenwerk a::before{
+	content: "";
+}
+
+body section.studentenwerk a::after{
+	content: "";
+}
+
+body section.project{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+body section.project img{
+	width: 50%;
+	background: none;
+	padding-left: 5em;
+}
+
+body section.project .project-opdracht{
+	width: 50%;
+    padding-right: 5em;
+    padding-left: 2em;
+    padding-top: 2em;
+}
+
+body section.project .project-opdracht h2,
+body section.project .project-opdracht p{
+	padding: 0;
+	text-align: left;
+	width: 100%;
+}
+
+body section.project h2{
+	background: none;
+	padding: 2em 3.5em 0 3.3em;
+}
+
+body section.project p,
+body section.project p + p{
+	background: none;
+	padding: 0.5em 5em;
+	width:100%;
+}
+
+
+body section.project:not(p:nth-of-type(1)){
+	width: auto;
+}
+
+body section.project:not(h2:nth-of-type(1)){
+	width: 100%;
+}
+
+body section.project img.icon.icon-bottom-right {
+    width: 10%;
+    position: initial;
+    left: 0;
+    padding: 0;
+    margin-left: -3%;
 }
 
 @media(max-width: 800px) {
@@ -248,10 +340,56 @@ body h3 + p + p{
 	}
 }
 
+@media(max-width: 800px) {
+	body section.project img{
+		padding-left: 1.5em;
+	}
+
+	body section.project .project-opdracht{
+		padding-right: 1.5em;
+	}
+
+	body section.project h2{
+		padding: 1em 1em 0 1em;
+	}
+
+	body section.project p, 
+	body section.project p + p{
+		padding: 0.5em 1.5em;
+	}
+}
+
 @media(max-width: 450px) {
     body h1 + p:first-of-type{
         font-size: 1.8em;
     }
+
+    body p a{
+    	width: 100%;
+    }
+
+    body section.project img{
+    	width: 100%;
+    }
+
+    body section.project h2{
+    	margin: 0;
+    }
+
+    body section.project .project-opdracht h2{
+    	margin-bottom: 0.5em;
+    }
+
+    body section.project .project-opdracht{
+    	width: 100%;
+    	padding: 0 1.5em;
+    	padding-top: 1em;
+    }
+
+    body section.project p, 
+    body section.project p + p {
+    	padding-left: 1.5em;
+	}
 }
 
 @media(max-width: 400px) {

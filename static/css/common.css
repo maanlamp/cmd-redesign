@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+    transform: scale(1.05);
+    font-size: 17px;
+}
+
 :root {
     /* Colors */
     --cmdYellow: #FFF021;

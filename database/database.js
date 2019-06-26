@@ -24,7 +24,8 @@ class DB {
 			new Entry ({
 				title: "contact",
 				raw: "# Contact"
-					+ "\n#{contact}"
+					+ "\nCMD Amsterdam"
+					+ "\n\n#{contact}"
 					+ "\n\n**Communication and Multimedia Design Amsterdam**"
 					+ "\nHogeschool van Amsterdam | Theo Thijssenhuis "
 					+ "\nMeer informatie over CMD ook op: [http://www.hva.nl/cmd](http://www.hva.nl/cmd)"
@@ -101,6 +102,7 @@ class DB {
 			new Entry({
 				title: "studentenwerk",
 				raw: "# Studentenwerk"
+					+ "\nBekijk ons werk"
 					+ "\n\n#{studentenwerk}"
 			}),
 			new Entry({
@@ -168,13 +170,19 @@ class DB {
 						+ "\n\nHet CMD Stagebureau is bereikbaar via mail of 06 – 21157122 (stagecoördinator Jos Kok). Jos is naast stagecoördinator ook nog docent bij CMD, dus hij doet zijn best om zo snel mogelijk alle verzoeken te beantwoorden."
 						+ "\n\n[Mail onze stagebureau](#)"	
 				}),
-								new Entry({
-				title: "offline",
-				raw: "# Je bent offline"
-					+ "\nMaar dit kun je nog lezen"
-					+ "\n\n[Info over deze opleiding](/read/cmd)"
-					+ "\n[Info over de studievakken](/read/vakken)"
-					+ "\n[Samenwerken met CMD](/read/doorgroeien)"
+				new Entry({
+					title: "offline",
+					raw: "# Je bent offline"
+						+ "\nMaar dit kun je nog lezen"
+						+ "\n\n[Info over deze opleiding](/read/cmd)"
+						+ "\n[Info over de studievakken](/read/vakken)"
+						+ "\n[Samenwerken met CMD](/read/doorgroeien)"
+				}),
+				new Entry({
+					title: "studentenwerk-project",
+					raw: "# Studentenwerk"
+						+ "\nThe game changer"
+						+ "\n#{voorbeeld-project}"
 				})
 			];
 		}
