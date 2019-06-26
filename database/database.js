@@ -19,7 +19,7 @@ class DB {
 					+ "naar het gehele onderwijsprogramma. Afgestudeerde studenten zijn "
 					+ "daarmee van grote waarde in het huidige werkveld. Daar zijn wij "
 					+ "trots op!"
-					+ "\n\n![Foto van iemand die een interface ontwerpt.](../images/cmd_daantjebons_0007.jpg)"
+					+ "\n\n![Foto van iemand die een interface ontwerpt.](/images/cmd_daantjebons_0007.jpg)"
 			}),
 			new Entry ({
 				title: "contact",
@@ -133,10 +133,10 @@ class DB {
 					+ "\n\n![Brede ambachtslieden](https://www.cmd-amsterdam.nl/wp-content/uploads/2013/11/uitgebalanceerde-brede-ambachtslieden.png)"
 					+ "\n\n### Specialisten"
 					+ "\nSommige CMD studenten vinden tijdens hun opleiding die ene passie, om daar vervolgens supergoed in te worden. Die werken na hun studie bijvoorbeeld als Usability Expert bij Valsplat of als Developer bij Q42. Anderen weten alles van een bepaald domein - zo werken er studenten bij Squla aan ‘leuk online leren’ voor kinderen."
-					+ "\n\n![Specialisten](https://www.cmd-amsterdam.nl/wp-content/uploads/2013/11/specialisten.png)"		
+					+ "\n\n![Specialisten](https://www.cmd-amsterdam.nl/wp-content/uploads/2013/11/specialisten.png)"
 					+ "\n\n### Digitale duizendpoten"
 					+ "\nEen kleine groep van onze afgestudeerden is goed in alle onderdelen. Die werken vaak in kleine ontwerpbureaus waar je alle specialisaties moet beheersen. Of in kleine bedrijven waar ze de digitale duizendpoot zijn. En dan zijn er nog onze absolute toppers die in alles uitblinken en écht overal terecht kunnen (onze unicorns)."
-					+ "\n\n![Digitale duizendpoten](https://www.cmd-amsterdam.nl/wp-content/uploads/2013/11/eigen-ontwerpbureau-etc.png)"				
+					+ "\n\n![Digitale duizendpoten](https://www.cmd-amsterdam.nl/wp-content/uploads/2013/11/eigen-ontwerpbureau-etc.png)"
 					+ "\n\n### Design researchers"
 					+ "\nEnkele afgestudeerden zijn werkzaam in het voortraject van het ontwerpproces. Bureau STBY doet bijvoorbeeld onderzoek naar 'digitale wensen van mensen', waar ontwerperbureaus vervolgens mee verder gaan. Bij Marktplaats is een CMD student als productmanager verantwoordelijk voor het tweedehands-auto deel van de site."
 					+ "\n\n![Design researchers](https://www.cmd-amsterdam.nl/wp-content/uploads/2013/11/design-researchers-NL.png)"
@@ -168,7 +168,7 @@ class DB {
 						+ "\n\n## Stagebureau CMD Amsterdam"
 						+ "\n\nVoor meer vragen rondom stages kunt u contact opnemen met ons stagebureau. Onze stagecoördinator Jos Kok komt graag met u in gesprek over de mogelijkheden."
 						+ "\n\nHet CMD Stagebureau is bereikbaar via mail of 06 – 21157122 (stagecoördinator Jos Kok). Jos is naast stagecoördinator ook nog docent bij CMD, dus hij doet zijn best om zo snel mogelijk alle verzoeken te beantwoorden."
-						+ "\n\n[Mail onze stagebureau](#)"	
+						+ "\n\n[Mail onze stagebureau](#)"
 				}),
 				new Entry({
 					title: "offline",
@@ -183,6 +183,211 @@ class DB {
 					raw: "# Studentenwerk"
 						+ "\nThe game changer"
 						+ "\n#{voorbeeld-project}"
+				}),
+				new Entry({
+					title: "home",
+					raw: `<section class="hero-image" id="hero">
+					<div class="hero-image__image">
+						<img loading="lazy"
+						sizes="(max-width: 428px) 100vw, 428px"
+						srcset="/images/cmd-blocks_medium.png 150w,
+						/images/cmd-blocks_big.png 428w"
+						src="/images/cmd-blocks_big.png"
+						alt="Drie blokken met daarin de letters C M en D. Je zou kunnen zeggen dat het blok-letters zijn. Hahaha!">
+					</div>
+					<div class="hero-image__textblock">
+						<h1 aria-label="Welkom op de website van CMD Amsterdam. Hopelijk vind je wat je zoekt." class="block-border">CMD Amsterdam</h1>
+						<p class="block-fill">Digital interactive design</p>
+					</div>
+					<img loading="lazy" class="icon hero-image__icon" src="/images/icon/laptop_icon.svg" alt="">
+				</section>
+				<section class="studentenwerk">
+					<h2>Studentenwerk</h2>
+					<div class="articles">
+						<div class="studentenwerk__article">
+							<img loading="lazy"
+							sizes="(max-width: 600px) 100vw, 600px"
+							data-srcset="/images/LR-kip-3-kopieren-small.jpg 320w,
+							/images/LR-kip-3-kopieren-medium.jpg 490w,
+							/images/LR-kip-3-kopieren-big.jpg 600w"
+							data-src="/images/LR-kip-3-kopieren-big.jpg"
+							alt="Een foto van een kip met een zonnebril. Mega wierd."
+							class="lazy">
+							<h3 lang="en">The game changer</h3>
+							<p><span lang="en">The Game Changer</span> houdt de game-uren van uw kind bij. Als de tijd verstreken is kan uw kind niet meer spelen. Hoe eerder je stopt met gamen, hoe meer bonusuren je krijgt.</p>
+						</div>
+						<div class="studentenwerk__article">
+							<img loading="lazy"
+							sizes="(max-width: 600px) 100vw, 600px"
+							data-srcset="/images/LR-Featured-screen_small.jpg 320w,
+							/images/LR-Featured-screen_medium.jpg 536w,
+							/images/LR-Featured-screen_big.jpg 600w"
+							data-src="/images/LR-Featured-screen_big.jpg"
+							alt="Een plaatje van een rups. Geen echte rups, maak je geen zorgen."
+							class="lazy">
+							<h3>Rupsie</h3>
+							<p>Rupsie is een app voor kinderen van 5-6 jaar. Met Rupsie maken kinderen, in combinatie met <abbr aria-label="artificiële intelligentie" title="Artificial Intelligence">AR</abbr>,vrolijke deuntjes voor beestjes. Het combineert op slimme wijze de fysieke en digitale wereld.</p>
+						</div>
+						<div class="studentenwerk__article">
+							<img loading="lazy"
+							sizes="(max-width: 600px) 100vw, 600px"
+							data-srcset="/images/LR-3-App-icon_small.jpg 320w,
+							/images/LR-3-App-icon_big.jpg 600w"
+							data-src="/images/LR-3-App-icon_big.jpg"
+							alt="Een blauw app-icoontje met het logo van de HUB applicatie"
+							class="lazy">
+							<h3>HUB</h3>
+							<p>Met HUB zal het vervoer van bedrijven in de binnenstad op een duurzame manier veranderen. Via een app kunnen werknemers slimme voertuigen - met digitaal slot - reserveren, beheren en classificeren.</p>
+						</div>
+					</div>
+					<a class="btn--grey-shadow" href="/read/studentenwerk">Bekijk studentenwerk</a>
+				</section>
+				<section class="cmd">
+					<div class="cmd__textblock">
+						<h2>Over CMD</h2>
+						<p class="p-big">Wij zijn Communication and Multimedia Design (CMD). Wij zijn een HBO-ontwerpopleiding voor digital interactive design. Onze studenten ontwerpen en realiseren digitale interactieve oplossingen die optimaal aansluiten bij de behoeften van de gebruikers.</p>
+						<p>In de kern van de opleiding zit interaction design, visual design en techniek (met name frontend development). Onze vakdocenten hebben een goed netwerk en vertalen continu recente ontwikkelingen naar het gehele onderwijsprogramma. Afgestudeerde studenten zijn daarmee van grote waarde in het huidige werkveld. Daar zijn wij trots op!</p>
+						<a class="btn--white-shadow" href="/read/cmd">Meer over CMD</a>
+					</div>
+					<div class="cmd__image">
+						<img loading="lazy" class="icon icon-top-left lazy" data-src="/images/icon/rotate_icon.svg" alt="Dit is een icoontje dat heel grappig ronddraait. Helaas kan je het niet zien want hij gaat echt heel hard! wieweweweww!">
+						<img loading="lazy"
+						sizes="(max-width: 1440px) 100vw, 1440px"
+						data-srcset="/images/cmd_daantjebons_0007_small.jpg 320w,
+						/images/cmd_daantjebons_0007_medium.jpg 1097w,
+						/images/cmd_daantjebons_0007_big.jpg 1440w"
+						data-src="/images/cmd_daantjebons_0007_big.jpg"
+						alt="Iemand is een interface aan het designen, dan krijg je een beetje een idee van wat CMD'ers doen. Allemaal blokjes en tekentjes, ik begrijp er niks van."
+						class="primary-image lazy">
+						<img loading="lazy" class="icon icon-bottom-right lazy" data-src="/images/icon/robot_icon.svg" alt="Hee kijk een robot. Ik ben ook een robot, misschien ken ik hem wel.">
+					</div>
+				</section>
+				<section class="subjects">
+					<div class="subjects__image">
+						<img loading="lazy" class="icon icon-top-right lazy" data-src="/images/icon/card_icon.svg" alt="Wooow, dit icoontje van speelkaarten doet echt hele rare dingen. Hij groeit en krimpt de hele tijd. Gek zeg.">
+						<img loading="lazy"
+						sizes="(max-width: 1440px) 100vw, 1440px"
+						data-srcset="/images/cmd_daantjebons_0025_small.jpg 320w,
+						/images/cmd_daantjebons_0025_medium.jpg 990w,
+						/images/cmd_daantjebons_0025_big.jpg 1440w"
+						data-src="/images/cmd_daantjebons_0025_big.jpg"
+						alt="Op deze foto kun je een hele rommelige tafel zien. De studenten zijn lekker aan het werk, helaas leren ze hier niet om hun rotzooi op te ruimen, hiehie"
+						class="primary-image lazy">
+						<img loading="lazy" class="icon icon-bottom-left lazy" data-src="/images/icon/hand_icon.svg" alt="Aaah, een bewegende hand! Oh nee, het is maar een plaatje. Gelukkig.">
+					</div>
+					<div class="subjects__textblock">
+						<h2>Studievakken</h2>
+						<p class="p-big">Het werk van onze studenten varieert van websites tot webshops, en van fysieke producten met een <abbr title="Near Field Communication" lang="en">NFC</abbr>-chip tot interactieve datavisualisaties. En dan zijn we er vast nog een paar vergeten.</p>
+						<p>We hebben een mooie selectie van studentenwerk voor je gemaakt. Hierbij kun je ook kiezen tussen werk uit de vier studiejaren. Laat je verrassen en voel je vrij om er comments bij te plaatsen!</p>
+						<a class="btn--grey-shadow" href="/read/vakken">Bekijk de studievakken</a>
+					</div>
+				</section>
+				<section class="grow">
+					<div class="grow__image">
+						<img loading="lazy"
+						sizes="(max-width: 776px) 100vw, 776px"
+						data-srcset="/images/t-shaped-designers_small.png 320w,
+						/images/t-shaped-designers_big.png 776w"
+						data-src="/images/t-shaped-designers_big.png"
+						alt="Vier diagrammen die illustreren wat de expertise van een CMD'er kan zijn."
+						class="lazy">
+					</div>
+					<div class="grow__textblock">
+						<h2>Doorgroeien</h2>
+						<p class="p-big">CMD studenten kunnen zich tijdens de opleiding in de diepte of breedte ontwikkelen. Hierdoor ontstaan verschillende typen T-shaped designers. </p>
+						<p>Ons kernprogramma richt zich op het gehele ontwerpproces, interaction design, visual design en front-end development. Door eigen keuzes van studenten ontstaan grofweg vier typen ontwerpers:</p>
+						<ul>
+							<li>Brede ambachtslieden</li>
+							<li>Specialisten</li>
+							<li>Digitale duizendpoten</li>
+							<li>Design researchers (uitzonderingen)</li>
+						</ul>
+						<img loading="lazy" class="icon icon-section lazy" data-src="/images/icon/pin_icon.svg" alt="Een knipperende punaise, het moet niet gekker worden.">
+						<a class="btn--grey-shadow" href="/read/doorgroeien">Meer over doorgroeien</a>
+					</div>
+				</section>
+				<section class="work-together">
+					<div class="work-together__textblock">
+						<h2>Samenwerken</h2>
+						<p class="p-big">Onze opleiding hecht grote waarde aan samenwerking. We kijken met interesse naar de ontwikkelingen in ons vakgebied en de samenleving en zoeken daar onderwerpen en partners uit. Daarnaast stellen wij onze kennis en kunde rond digital interactive design graag beschikbaar voor ons netwerk.</p>
+						<p>Dit alles doen we via:</p>
+						<ul>
+							<li>Stages</li>
+							<li>Het werken aan projecten</li>
+							<li>Gastcolleges</li>
+							<li>Bedrijfsbezoeken</li>
+							<li>Bijbaantjes</li>
+							<li>(Betaalde) ontwerp klussen voor onze studenten</li>
+							<li>Korte cursussen en masterclasses voor bedrijven </li>
+						</ul>
+						<a href="/read/samenwerken">Meer over samenwerken</a>
+					</div>
+					<div class="work-together__image">
+						<img loading="lazy" class="icon icon-top-left lazy" data-src="/images/icon/globe_icon.svg" alt="Een ronddraaiende globe. Deze plaatjes geven wel een unieke draai aan het verhaal. Hiehaho. Dat was een woordgrapje trouwens.">
+						<img loading="lazy"
+						sizes="(max-width: 740px) 100vw, 740px"
+						data-srcset="/images/cmd_daantjebons_small.jpg 320w,
+						/images/cmd_daantjebons_mediun.jpg 566w,
+						/images/cmd_daantjebons_big.jpg 740w"
+						data-src="/images/cmd_daantjebons_big.jpg"
+						alt="Iemand houdt een presentatie, en een studente maakt notities. CMD'ers zijn dan ook hele oplettende mensen."
+						class="primary-image lazy">
+						<img loading="lazy" class="icon icon-bottom-right lazy" data-src="/images/icon/phone_icon.svg" alt="Een trillende telefoon, volgens mij heeft iemand een nieuwe tinder-notificatie. Spannend.">
+					</div>
+				</section>
+				<section class="contact">
+					<h2 class="contact__title">Contact</h2>
+					<form action="" class="contact__form" id="contact-form">
+						<div class="contact-form-left">
+							<select class="dropbtn">
+								<option selected disabled hidden>Kies een onderwerp</option>
+								<option>Vraag</option>
+								<option>Samenwerken</option>
+								<option>Overig</option>
+							</select>
+							<input class="form__name" type="text" name="" placeholder="Naam" aria-label="Vul je naam in">
+							<input class="form__email" type="email" class="email" name="" placeholder="Mailadres (i.v.m. reply)" aria-label="Vul je e-mailadres in">
+						</div>
+						<div class="contact-form-right">
+							<textarea class="form" name="" id="" placeholder="Inhoud bericht" aria-label="Vul hier de inhoud van je bericht in"></textarea>
+						</div>
+					</form>
+					<div class="contact__btn">
+						<button type="submit" class="btn btn--secondary" form="contact-form">Verstuur</button>
+					</div>
+				</section>
+				<section class="staff">
+					<div class="staff__card">
+						<img loading="lazy" class="card__image lazy" data-src="/images/staff/harry-zengerink.jpg" alt="Een zwart-wit foto van Harry Zengerink. Hij staat voor een weelderige haag en lacht je toe.">
+						<p class="card__name">Harry Zengerink</p>
+						<p class="card__position">Opleidingsmanager</p>
+						<p class="card__phone">06 – 21 15 89 83</p>
+					</div>
+					<div class="staff__card">
+						<img loading="lazy" class="card__image lazy" data-src="/images/staff/marielle-beekman.jpg" alt="Een zwart-wit foto van Marielle Beekman. Ze poseert voor een egale muur en ook zij lacht je toe.">
+						<p class="card__name">Marielle Beekman</p>
+						<p class="card__position">Hoofd Onderwijsbureau</p>
+						<p class="card__phone">+31 (0) 20 595 1855</p>
+					</div>
+					<div class="staff__card">
+						<img loading="lazy" class="card__image lazy" data-src="/images/staff/jos-kok.jpg" alt="Een zwart-wit foto van Jos Kok. Er weerkaatst licht in zijn bril terwijl hij naar je lacht.">
+						<p class="card__name">Jos Kok</p>
+						<p class="card__position">Stagecoördinator</p>
+						<p class="card__phone">06 – 21 15 71 22</p>
+					</div>
+					<div class="staff__card">
+						<img loading="lazy" class="card__image lazy" data-src="/images/staff/mattijs-blekemolen.jpg" alt="Een zwart-wit foto van Mattijs Blekemolen. Hij onderhoudt deze website, dus je mag best naar hem lachen. Dat ziet hij natuurlijk niet, maar jij ziet hem ook niet lachen dus dan staan jullie quitte.">
+						<p class="card__name">Mattijs Blekemolen</p>
+						<p class="card__position">Externe Samenwerking</p>
+						<p class="card__phone">06 – 21 15 61 86</p>
+					</div>
+				</section>
+				<section class="banner">
+					<p class="banner__title">Studeren bij CMD?</p>
+					<a class="banner__button" href="">Kom naar onze open dag!</a>
+				</section>
+				<a tabindex="0" title="Scroll terug naar boven" aria-label="Scroll terug naar boven" id="top-button" type="button" href="#hero">&#8593;</a>
+				<script type="module" src="/js/home.js"></script>`
 				})
 			];
 		}

@@ -5,20 +5,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="/css/common.css">
+	<% if (title !== "home") { %>
 	<link rel="stylesheet" href="/css/generic.css">
+	<% } %>
 	<link rel="stylesheet" href="/css/home.css">
+	<link rel="stylesheet" href="/css/keyframes.css">
 	<script type="module" src="/js/transition.js"></script>
-	<title><%= title -%></title>
+	<title>CMD - <%= title[0].toUpperCase() + title.slice(1) -%></title>
 </head>
-<body>
-    <header class="header">
+<body class=<%= (title==="home") ? "no-fadein" : "" %>>
+	<header class="header">
 		<a class="logo-container" aria-label="Home" href="/#">
-			<img loading="lazy" src="../images/cmd-logo.svg" alt="CMD logo" class="header__logo">
+			<img loading="lazy" src="/images/cmd-logo.svg" alt="CMD logo" class="header__logo">
 		</a>
-		
+
 		<input class="menu-btn" type="checkbox" id="menu-hamburger">
-		<label class="menu-icon" for="menu-hamburger"><img loading="lazy" class="hambuger-image" src="../images/hamburger-icon.svg" alt=""></label>
-		
+		<label class="menu-icon" for="menu-hamburger">
+			<img loading="lazy" class="hambuger-image" src="/images/hamburger-icon.svg" alt="">
+		</label>
+
 		<nav class="header__nav">
 			<ul class="nav">
 				<li><a href="/read/studentenwerk">Studentenwerk</a></li>
@@ -27,16 +32,17 @@
 				<li><a href="/read/doorgroeien">Doorgroeien</a></li>
 				<li><a href="/read/samenwerken">Samenwerken</a></li>
 				<li><a href="/read/contact">Contact</a></li>
-				<li class="search"><a href="#"><img loading="lazy" src="../images/search.svg" alt="Zoeken"></a></li>
-				<li class="netherlands"><a href="#"><img loading="lazy" src="../images/netherlands-flag.png" alt="Verander de taal naar Nederlands"></a></li>
-				<li class="english"><a href="#"><img loading="lazy" src="../images/english-flag.png" alt="Verander de taal naar Engels"></a></li>
+				<li class="search"><a href="#"><img loading="lazy" src="/images/search.svg" alt="Zoeken"></a></li>
+				<li class="netherlands"><a href="#"><img loading="lazy" src="/images/netherlands-flag.png" alt="Verander de taal naar Nederlands"></a></li>
+				<li class="english"><a href="#"><img loading="lazy" src="/images/english-flag.png" alt="Verander de taal naar Engels"></a></li>
 			</ul>
 		</nav>
 	</header>
+
 	<%- html -%>
 
 	<footer class="footer">
-		<a href="http://www.hva.nl/" class="footer__logo"><img src="../images/hva-logo-white.png" alt="HVA logo"></a>
+		<a href="http://www.hva.nl/" class="footer__logo"><img src="/images/hva-logo-white.png" alt="HVA logo"></a>
 		<p class="footer__copyright">&copy; 2019 CMD Amsterdam</p>
 		<ul class="footer__social">
 			<li><a href="" id="twitter-logo" aria-label="Vind CMD op Twitter"></a></li>

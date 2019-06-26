@@ -10,10 +10,6 @@ function edit (req, res) {
 	res.render("edit", { title, raw: database.get(title).raw });
 }
 
-function home(req, res) {
-	res.sendFile("html/home.html", { root: __dirname + "/../static"});
-}
-
 function read (req, res) {
 	const { title } = req.params;
 
@@ -43,7 +39,6 @@ async function save (req, res) {
 
 module.exports = {
 	edit,
-	home,
 	read,
 	save
 };

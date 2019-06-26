@@ -82,7 +82,7 @@ void function initAnimations () {
 				.remove("zoom")
 				.remove("ghost");
 	}
-	
+
 	const stopTimeout = new ResetableTimeout({
 		timeout: 1000,
 		handler: stopScrolling
@@ -91,7 +91,6 @@ void function initAnimations () {
 	const startTimeout = new ResetableTimeout({
 		timeout: 50,
 		handler () {
-			console.log("SCROLL FIRED")
 			just.select(".icon-top-left").class.add("rotate");
 			just.select(".icon-bottom-left").class.add("bounce");
 			just.select(".icon-bottom-right").class.add("shake");
@@ -100,7 +99,7 @@ void function initAnimations () {
 			stopTimeout.reset();
 		}
 	});
-	
+
 	window.addEventListener("scroll", () => {
 		startTimeout.start();
 	});
