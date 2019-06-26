@@ -1,4 +1,4 @@
-const PORT = 1337;
+const PORT = process.env.PORT || 1337;
 const express = require("express");
 const routes = require("./routes/routes.js");
 const bodyparser = require("body-parser").json();
