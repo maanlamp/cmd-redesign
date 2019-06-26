@@ -84,6 +84,11 @@ p {
 }
 
 button,
+a{
+    cursor: pointer;
+}
+
+button,
 section a,
 .btn {
     background-color: var(--cmdBlack);
@@ -99,7 +104,6 @@ section a,
     width: 60%;
     text-decoration: none;
     transition: all 500ms ease;
-
 }
 
 button:hover,
