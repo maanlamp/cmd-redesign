@@ -359,7 +359,7 @@ body section.project img.icon.icon-bottom-right {
 	}
 }
 
-@media(max-width: 750){
+@media(max-width: 750px){
 	body section.project img{
     	width: 100%;
     }
