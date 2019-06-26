@@ -359,16 +359,18 @@ body section.project img.icon.icon-bottom-right {
 	}
 }
 
+@media(max-width: 750){
+	body section.project img{
+    	width: 100%;
+    }
+}
+
 @media(max-width: 450px) {
     body h1 + p:first-of-type{
         font-size: 1.8em;
     }
 
     body p a{
-    	width: 100%;
-    }
-
-    body section.project img{
     	width: 100%;
     }
 
