@@ -15,8 +15,7 @@
     "uglify-js": "^3.6.0"
   },
   "scripts": {
-    "compress:css": "node-sass static/css/home.css static/css/home.compressed.css --output-style compressed",
-    "compress:js": "uglifyjs static/js/lazyloading.js -o static/js/lazyloading.compressed.js"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
