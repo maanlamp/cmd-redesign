@@ -352,6 +352,7 @@ section.staff {
 
 .card__phone {
     line-height: 4;
+    background: none;
 }
 
 /* Banner */
